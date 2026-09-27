@@ -16,7 +16,7 @@ export function SiteFooter() {
   return (
     <footer className="mt-auto border-t border-zinc-200 bg-white">
       <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-12">
-        <div className="grid gap-10 md:grid-cols-3">
+        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           <div>
             <div className="flex items-center gap-3">
               <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-600 text-white">
@@ -47,6 +47,46 @@ export function SiteFooter() {
               ))}
             </ul>
           </nav>
+
+          <div>
+            <h3 className="text-sm font-bold text-zinc-900">توسعه‌دهنده فارسی و UI</h3>
+            <a
+              href="https://parsnest.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-flex min-h-11 items-center rounded-lg transition-opacity hover:opacity-80"
+              aria-label="وب‌سایت آشیانه پارس — طراحی سایت و طراحی نرم‌افزار"
+            >
+              <img src="/parsnest-logo.png" alt="لوگوی آشیانه پارس" className="h-9 w-auto" />
+            </a>
+            <p className="mt-3 max-w-xs text-xs leading-6 text-zinc-500">
+              ترجمهٔ کامل پروژه به فارسی، طراحی رابط کاربری راست‌چین با فونت ایران‌یکان و تقویم جلالی، و آماده‌سازی استقرار روی Vercel — توسط آشیانه پارس.
+            </p>
+            <ul className="mt-2 space-y-1">
+              <li>
+                <a
+                  href="https://parsnest.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex min-h-11 items-center gap-1.5 rounded-lg py-1.5 text-sm font-medium text-zinc-700 transition-colors hover:text-amber-600"
+                >
+                  طراحی سایت
+                  <ExternalLink className="h-3.5 w-3.5 text-zinc-400" aria-hidden="true" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://parsnest.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex min-h-11 items-center gap-1.5 rounded-lg py-1.5 text-sm font-medium text-zinc-700 transition-colors hover:text-amber-600"
+                >
+                  طراحی نرم‌افزار
+                  <ExternalLink className="h-3.5 w-3.5 text-zinc-400" aria-hidden="true" />
+                </a>
+              </li>
+            </ul>
+          </div>
 
           <div>
             <h3 className="text-sm font-bold text-zinc-900">ساخته‌شده به نام</h3>

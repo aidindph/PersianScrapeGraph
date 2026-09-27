@@ -22,6 +22,20 @@ export function Hero() {
             نسخهٔ ۲.۳.۰ · فورک فارسی ScrapeGraphAI
           </span>
 
+          <a
+            href="https://parsnest.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-3 inline-flex items-center gap-2.5 rounded-full border border-zinc-200 bg-white px-4 py-1.5 text-xs font-medium text-zinc-600 shadow-sm transition-colors hover:border-amber-300 hover:bg-amber-50"
+            aria-label="آشیانه پارس — توسعه‌دهنده فارسی و توسعه‌دهنده UI پروژه — طراحی سایت و طراحی نرم‌افزار"
+          >
+            <img src="/parsnest-logo.png" alt="لوگوی آشیانه پارس" className="h-5 w-auto" />
+            <span>
+              توسعه‌دهنده فارسی و توسعه‌دهنده UI:{" "}
+              <span className="font-bold text-zinc-800">آشیانه پارس</span>
+            </span>
+          </a>
+
           <h1 className="mt-6 text-balance text-4xl font-bold leading-[1.25] tracking-tight text-zinc-900 sm:text-5xl sm:leading-[1.2]">
             یک بار اسکرپ کن،
             <span className="text-amber-500"> هر چه بخواهی </span>

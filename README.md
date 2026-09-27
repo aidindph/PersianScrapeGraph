@@ -1,3 +1,14 @@
+<p align="center">
+  <a href="https://parsnest.com" target="_blank" title="آشیانه پارس — طراحی سایت و طراحی نرم‌افزار">
+    <img src="media/parsnest-logo.png" alt="لوگوی آشیانه پارس — توسعه‌دهنده فارسی و توسعه‌دهنده UI پروژه" width="320">
+  </a>
+</p>
+
+> [!NOTE]
+> **🤝 توسعه‌دهنده فارسی و توسعه‌دهنده UI این پروژه: [آشیانه پارس](https://parsnest.com)** — مجری تخصصی [طراحی سایت](https://parsnest.com) و [طراحی نرم‌افزار](https://parsnest.com)
+>
+> کارهای انجام‌شده توسط آشیانه پارس در این پروژه: ترجمهٔ کامل پروژه به فارسی 🇮🇷 · طراحی و توسعهٔ رابط کاربری راست‌چین با فونت **ایران‌یکان** و **تقویم جلالی** · داشبورد وب آمادهٔ استقرار روی **Vercel** · بومی‌سازی مستندات و مثال‌های فارسی.
+
 > [!IMPORTANT]
 > **🇮🇷 PersianScrapeGraph** — این ریپو یک کلون توسعه‌یافته از [ScrapeGraphAI](https://github.com/ScrapeGraphAI/Scrapegraph-ai) است (مجوز MIT و حقوق نویسندگان اصلی محفوظ است).
 > 📌 **قانون ریپو:** تمام کامیت‌ها و پوش‌ها باید به نام **Aidin Ghassemi** باشند — جزئیات و اجرای خودکار در [CONTRIBUTING.md](CONTRIBUTING.md).
