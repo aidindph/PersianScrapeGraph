@@ -1,21 +1,21 @@
-# Script Generator Graph Example
+# مثال گراف تولیدکنندهٔ اسکریپت (Script Generator Graph)
 
-This example demonstrates how to use Scrapegraph-ai to generate automation scripts based on data analysis.
+این مثال نشان می‌دهد چگونه می‌توان با Scrapegraph-ai بر اساس تحلیل داده، اسکریپت‌های خودکارسازی تولید کرد.
 
-## Features
+## قابلیت‌ها
 
-- Automated script generation
-- Task automation
-- Code optimization
-- Multiple language support
+- تولید خودکار اسکریپت
+- خودکارسازی وظایف
+- بهینه‌سازی کد
+- پشتیبانی از چند زبان
 
-## Setup
+## راه‌اندازی
 
-1. Install required dependencies
-2. Copy `.env.example` to `.env`
-3. Configure your API keys in the `.env` file
+1. وابستگی‌های مورد نیاز را نصب کنید
+2. فایل `.env.example` را به `.env` کپی کنید
+3. کلیدهای API خود را در فایل `.env` پیکربندی کنید
 
-## Usage
+## نحوهٔ استفاده
 
 ```python
 from scrapegraphai.graphs import ScriptGeneratorGraph
@@ -24,7 +24,7 @@ graph = ScriptGeneratorGraph()
 script = graph.generate("task description")
 ```
 
-## Environment Variables
+## متغیرهای محیطی
 
-Required environment variables:
-- `OPENAI_API_KEY`: Your OpenAI API key
+متغیرهای محیطی مورد نیاز:
+- `OPENAI_API_KEY`: کلید API شرکت OpenAI شما

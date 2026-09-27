@@ -1,21 +1,21 @@
-# Document Scraper Graph Example
+# مثال گراف اسکرپر اسناد (Document Scraper Graph)
 
-This example demonstrates how to use Scrapegraph-ai to extract data from various document formats (PDF, DOC, DOCX, etc.).
+این مثال نشان می‌دهد چگونه می‌توان با Scrapegraph-ai از قالب‌های مختلف سند (PDF، DOC، DOCX و غیره) داده استخراج کرد.
 
-## Features
+## قابلیت‌ها
 
-- Multi-format document support
-- Text extraction
-- Document parsing
-- Metadata extraction
+- پشتیبانی از اسناد چندقالبی
+- استخراج متن
+- تجزیهٔ اسناد
+- استخراج فراداده (metadata)
 
-## Setup
+## راه‌اندازی
 
-1. Install required dependencies
-2. Copy `.env.example` to `.env`
-3. Configure your API keys in the `.env` file
+1. وابستگی‌های مورد نیاز را نصب کنید
+2. فایل `.env.example` را به `.env` کپی کنید
+3. کلیدهای API خود را در فایل `.env` پیکربندی کنید
 
-## Usage
+## نحوهٔ استفاده
 
 ```python
 from scrapegraphai.graphs import DocumentScraperGraph
@@ -24,7 +24,7 @@ graph = DocumentScraperGraph()
 content = graph.scrape("document.pdf")
 ```
 
-## Environment Variables
+## متغیرهای محیطی
 
-Required environment variables:
-- `OPENAI_API_KEY`: Your OpenAI API key
+متغیرهای محیطی مورد نیاز:
+- `OPENAI_API_KEY`: کلید API شرکت OpenAI شما

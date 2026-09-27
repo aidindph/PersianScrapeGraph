@@ -1,21 +1,21 @@
-# Code Generator Graph Example
+# مثال گراف تولیدکنندهٔ کد (Code Generator Graph)
 
-This example demonstrates how to use Scrapegraph-ai to generate code based on specifications and requirements.
+این مثال نشان می‌دهد چگونه می‌توان با Scrapegraph-ai بر اساس مشخصات و نیازمندی‌ها کد تولید کرد.
 
-## Features
+## قابلیت‌ها
 
-- Code generation from specifications
-- Multiple programming languages support
-- Code documentation
-- Best practices implementation
+- تولید کد از مشخصات (specifications)
+- پشتیبانی از چند زبان برنامه‌نویسی
+- مستندسازی کد
+- پیاده‌سازی بهترین شیوه‌ها
 
-## Setup
+## راه‌اندازی
 
-1. Install required dependencies
-2. Copy `.env.example` to `.env`
-3. Configure your API keys in the `.env` file
+1. وابستگی‌های مورد نیاز را نصب کنید
+2. فایل `.env.example` را به `.env` کپی کنید
+3. کلیدهای API خود را در فایل `.env` پیکربندی کنید
 
-## Usage
+## نحوهٔ استفاده
 
 ```python
 from scrapegraphai.graphs import CodeGeneratorGraph
@@ -24,7 +24,7 @@ graph = CodeGeneratorGraph()
 code = graph.generate("code specification")
 ```
 
-## Environment Variables
+## متغیرهای محیطی
 
-Required environment variables:
-- `OPENAI_API_KEY`: Your OpenAI API key
+متغیرهای محیطی مورد نیاز:
+- `OPENAI_API_KEY`: کلید API شرکت OpenAI شما

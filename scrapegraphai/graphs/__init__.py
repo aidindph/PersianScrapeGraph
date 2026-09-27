@@ -1,5 +1,6 @@
 """
-This module defines the graph structures and related functionalities for the ScrapeGraphAI application.
+این ماژول ساختارهای گراف (پایپ‌لاین‌های اسکرپینگ مانند SmartScraperGraph و SearchGraph)
+و کارکردهای مرتبط با آن‌ها را برای ScrapeGraphAI تعریف و صادر می‌کند.
 """
 
 from .abstract_graph import AbstractGraph

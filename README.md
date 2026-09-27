@@ -4,11 +4,11 @@
 
 ---
 
-## 🚀 **Looking for an even faster and simpler way to scrape at scale (only 5 lines of code)?** Check out our enhanced version at [**ScrapeGraphAI.com**](https://scrapegraphai.com/?utm_source=github&utm_medium=readme&utm_campaign=oss_cta&ut#m_content=top_banner)! 🚀
+## 🚀 **به‌دنبال راهی حتی سریع‌تر و ساده‌تر برای اسکرپینگ در مقیاس بزرگ هستید (فقط ۵ خط کد)؟** نسخهٔ ارتقایافتهٔ ما را در [**ScrapeGraphAI.com**](https://scrapegraphai.com/?utm_source=github&utm_medium=readme&utm_campaign=oss_cta&ut#m_content=top_banner) ببینید! 🚀
 
 ---
 
-# 🕷️ ScrapeGraphAI: You Only Scrape Once
+# 🕷️ ScrapeGraphAI: فقط یک‌بار اسکرپ کنید
 
 <p align="center">
   <a href="https://scrapegraphai.com">
@@ -16,7 +16,7 @@
   </a>
 </p>
 
-[English](README.md) | [中文](docs/chinese.md) | [日本語](docs/japanese.md)
+[English](docs/english.md) | [فارسی](README.md) | [中文](docs/chinese.md) | [日本語](docs/japanese.md)
 | [한국어](docs/korean.md)
 | [Русский](docs/russian.md) | [Türkçe](docs/turkish.md)
 | [Deutsch](docs/german.md)
@@ -34,12 +34,30 @@
 <a href="https://trendshift.io/repositories/15078" target="_blank"><img src="https://trendshift.io/api/badge/repositories/15078" alt="ScrapeGraphAI%2FScrapegraph-ai | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
 <p align="center">
 
-[ScrapeGraphAI](https://scrapegraphai.com) is a *web scraping* python library that uses LLM and direct graph logic to create scraping pipelines for websites and local documents (XML, HTML, JSON, Markdown, etc.).
+[ScrapeGraphAI](https://scrapegraphai.com) یک کتابخانهٔ پایتونی برای **وب‌اسکرپینگ** (استخراج داده از وب) است که با استفاده از LLM و منطق مستقیم گراف (direct graph logic)، پایپ‌لاین‌های اسکرپینگ برای وب‌سایت‌ها و اسناد محلی (XML، HTML، JSON، Markdown و غیره) می‌سازد.
 
-Just say which information you want to extract and the library will do it for you!
+فقط بگویید چه اطلاعاتی را می‌خواهید استخراج کنید؛ کتابخانه بقیهٔ کار را برایتان انجام می‌دهد!
 
-## 🚀 Integrations
-ScrapeGraphAI offers seamless integration with popular frameworks and tools to enhance your scraping capabilities. Whether you're building with Python or Node.js, using LLM frameworks, or working with no-code platforms, we've got you covered with our comprehensive integration options..
+## 🏗️ ساختار این فورک
+
+این ریپو علاوه بر خود کتابخانه، یک **محصول کامل و آمادهٔ استقرار** هم دارد:
+
+```text
+PersianScrapeGraph/
+├── scrapegraphai/         # کتابخانهٔ اصلی (موتور اسکرپینگ با LLM)
+├── webui/                 # داشبورد وب فارسی — Next.js 16، راست‌چین، فونت ایران‌یکان، تقویم جلالی
+├── api-service/           # سرویس API موتور استخراج — FastAPI + Docker
+├── examples/persian/      # نمونه‌های استفاده با پرومپت فارسی
+└── docs/deploy-vercel.md  # راهنمای گام‌به‌گام استقرار روی Vercel
+```
+
+- 🖥️ **داشبورد وب فارسی** (`webui/`): رابط کاربری کامل راست‌چین با فونت **ایران‌یکان**، **تقویم جلالی**، تاریخچهٔ استخراج و موتور دمو — آمادهٔ استقرار روی **Vercel** (راهنما: [docs/deploy-vercel.md](docs/deploy-vercel.md)).
+- ⚙️ **سرویس موتور** (`api-service/`): گراف کامل ScrapeGraphAI پشت یک REST API برای استقرار کامل روی Railway / Render / Fly.io / سرور شخصی.
+- 🇮🇷 **بومی‌سازی فارسی**: تمام مستندات، مثال‌ها و رابط کاربری فارسی شده‌اند؛ پرومپت‌های فارسی هم در `examples/persian/` آماده است.
+- 📏 **قانون ریپو**: تمام کامیت‌ها باید به نام **Aidin Ghassemi** باشند — به‌صورت خودکار در لوکال (pre-commit) و روی GitHub (CI) اعمال می‌شود؛ جزئیات در [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## 🚀 یکپارچه‌سازی‌ها
+ScrapeGraphAI با فریم‌ورک‌ها و ابزارهای محبوب، یکپارچه‌سازی روانی دارد تا توانایی‌های اسکرپینگ شما را تقویت کند. چه با پایتون یا Node.js توسعه می‌دهید، چه از فریم‌ورک‌های LLM استفاده می‌کنید و چه با پلتفرم‌های بدون کد (no-code) کار می‌کنید، گزینه‌های جامعی برای یکپارچه‌سازی در اختیارتان است.
 
 <p align="center">
   <a href="https://scrapegraphai.com">
@@ -47,19 +65,19 @@ ScrapeGraphAI offers seamless integration with popular frameworks and tools to e
   </a>
 </p>
 
-You can find more informations at the following [link](https://scrapegraphai.com)
+اطلاعات بیشتر را می‌توانید از این [لینک](https://scrapegraphai.com) دنبال کنید.
 
-**Integrations**:
-- **API**: [Documentation](https://docs.scrapegraphai.com/introduction)
-- **SDKs**: [Python](https://docs.scrapegraphai.com/sdks/python), [Node](https://docs.scrapegraphai.com/sdks/javascript)
-- **LLM Frameworks**: [Langchain](https://docs.scrapegraphai.com/integrations/langchain), [Llama Index](https://docs.scrapegraphai.com/integrations/llamaindex), [Crew.ai](https://docs.scrapegraphai.com/integrations/crewai), [Agno](https://docs.scrapegraphai.com/integrations/agno), [CamelAI](https://github.com/camel-ai/camel)
-- **Low-code Frameworks**: [Pipedream](https://pipedream.com/apps/scrapegraphai), [Bubble](https://bubble.io/plugin/scrapegraphai-1745408893195x213542371433906180), [Zapier](https://zapier.com/apps/scrapegraphai/integrations), [n8n](http://localhost:5001/dashboard), [Dify](https://dify.ai), [Toolhouse](https://app.toolhouse.ai/mcp-servers/scrapegraph_smartscraper)
-- **MCP server**:  [Link](https://smithery.ai/server/@ScrapeGraphAI/scrapegraph-mcp)
+**یکپارچه‌سازی‌ها**:
+- **API**: [مستندات](https://docs.scrapegraphai.com/introduction)
+- **SDKها**: [Python](https://docs.scrapegraphai.com/sdks/python)، [Node](https://docs.scrapegraphai.com/sdks/javascript)
+- **فریم‌ورک‌های LLM**: [Langchain](https://docs.scrapegraphai.com/integrations/langchain)، [Llama Index](https://docs.scrapegraphai.com/integrations/llamaindex)، [Crew.ai](https://docs.scrapegraphai.com/integrations/crewai)، [Agno](https://docs.scrapegraphai.com/integrations/agno)، [CamelAI](https://github.com/camel-ai/camel)
+- **فریم‌ورک‌های کم‌کد (Low-code)**: [Pipedream](https://pipedream.com/apps/scrapegraphai)، [Bubble](https://bubble.io/plugin/scrapegraphai-1745408893195x213542371433906180)، [Zapier](https://zapier.com/apps/scrapegraphai/integrations)، [n8n](http://localhost:5001/dashboard)، [Dify](https://dify.ai)، [Toolhouse](https://app.toolhouse.ai/mcp-servers/scrapegraph_smartscraper)
+- **سرور MCP**: [لینک](https://smithery.ai/server/@ScrapeGraphAI/scrapegraph-mcp)
 
 
-## 🚀 Quick install
+## 🚀 نصب سریع
 
-The reference page for Scrapegraph-ai is available on the official page of PyPI: [pypi](https://pypi.org/project/scrapegraphai/).
+صفحهٔ مرجع Scrapegraph-ai در صفحهٔ رسمی PyPI در دسترس است: [pypi](https://pypi.org/project/scrapegraphai/).
 
 ```bash
 pip install scrapegraphai
@@ -68,13 +86,13 @@ pip install scrapegraphai
 playwright install
 ```
 
-**Note**: it is recommended to install the library in a virtual environment to avoid conflicts with other libraries 🐱
+**نکته:** توصیه می‌شود کتابخانه را داخل یک محیط مجازی (virtual environment) نصب کنید تا با سایر کتابخانه‌ها تداخلی پیش نیاید 🐱
 
 
-## 💻 Usage
-There are multiple standard scraping pipelines that can be used to extract information from a website (or local file).
+## 💻 نحوهٔ استفاده
+چند پایپ‌لاین استاندارد برای استخراج اطلاعات از یک وب‌سایت (یا فایل محلی) وجود دارد.
 
-The most common one is the `SmartScraperGraph`, which extracts information from a single page given a user prompt and a source URL.
+رایج‌ترین آن‌ها `SmartScraperGraph` است که با گرفتن یک پرومپت از کاربر و یک URL منبع، اطلاعات را از یک صفحهٔ واحد استخراج می‌کند.
 
 
 ```python
@@ -106,7 +124,7 @@ print(json.dumps(result, indent=4))
 ```
 
 > [!NOTE]
-> For OpenAI and other models you just need to change the llm config!
+> برای OpenAI و سایر مدل‌ها فقط کافی است تنظیمات llm را تغییر دهید!
 > ```python
 >graph_config = {
 >    "llm": {
@@ -117,9 +135,10 @@ print(json.dumps(result, indent=4))
 >    "headless": False,
 >}
 >```
+>
 
 
-The output will be a dictionary like the following:
+خروجی یک دیکشنری مانند زیر خواهد بود:
 
 ```python
 {
@@ -148,94 +167,94 @@ The output will be a dictionary like the following:
     }
 }
 ```
-There are other pipelines that can be used to extract information from multiple pages, generate Python scripts, or even generate audio files.
+پایپ‌لاین‌های دیگری نیز وجود دارند که می‌توانند از چند صفحه اطلاعات استخراج کنند، اسکریپت پایتون تولید کنند یا حتی فایل صوتی بسازند.
 
-| Pipeline Name           | Description                                                                                                      |
+| نام پایپ‌لاین         | توضیحات                                                                                                        |
 |-------------------------|------------------------------------------------------------------------------------------------------------------|
-| SmartScraperGraph       | Single-page scraper that only needs a user prompt and an input source.                                           |
-| SearchGraph             | Multi-page scraper that extracts information from the top n search results of a search engine.                  |
-| SpeechGraph             | Single-page scraper that extracts information from a website and generates an audio file.                       |
-| ScriptCreatorGraph      | Single-page scraper that extracts information from a website and generates a Python script.                     |
-| SmartScraperMultiGraph  | Multi-page scraper that extracts information from multiple pages given a single prompt and a list of sources.    |
-| ScriptCreatorMultiGraph | Multi-page scraper that generates a Python script for extracting information from multiple pages and sources.     |
+| SmartScraperGraph       | اسکرپر تک‌صفحه‌ای که فقط به یک پرومپت کاربر و یک منبع ورودی نیاز دارد.                                            |
+| SearchGraph             | اسکرپر چندصفحه‌ای که اطلاعات را از n نتیجهٔ برتر یک موتور جست‌وجو استخراج می‌کند.                                  |
+| SpeechGraph             | اسکرپر تک‌صفحه‌ای که اطلاعات را از وب‌سایت استخراج کرده و یک فایل صوتی تولید می‌کند.                              |
+| ScriptCreatorGraph      | اسکرپر تک‌صفحه‌ای که اطلاعات را از وب‌سایت استخراج کرده و یک اسکریپت پایتون تولید می‌کند.                         |
+| SmartScraperMultiGraph  | اسکرپر چندصفحه‌ای که با یک پرومپت واحد و فهرستی از منابع، از چند صفحه اطلاعات استخراج می‌کند.                      |
+| ScriptCreatorMultiGraph | اسکرپر چندصفحه‌ای که برای استخراج اطلاعات از چند صفحه و منبع، یک اسکریپت پایتون تولید می‌کند.                     |
 
-For each of these graphs there is the multi version. It allows to make calls of the LLM in parallel.
+برای هر یک از این گراف‌ها نسخهٔ multi نیز وجود دارد که امکان فراخوانی موازی LLM را فراهم می‌کند.
 
-It is possible to use different LLM through APIs, such as **OpenAI**, **Groq**, **Azure**, **Gemini**, **[MiniMax](docs/minimax.md)** and more, or local models using **Ollama**.
+می‌توانید از LLMهای مختلف از طریق API استفاده کنید؛ مانند **OpenAI**، **Groq**، **Azure**، **Gemini**، **[MiniMax](docs/minimax.md)** و موارد دیگر، یا از مدل‌های محلی با **Ollama** بهره ببرید.
 
-Remember to have [Ollama](https://ollama.com/) installed and download the models using the **ollama pull** command, if you want to use local models.
+اگر می‌خواهید از مدل‌های محلی استفاده کنید، به یاد داشته باشید که [Ollama](https://ollama.com/) را نصب کرده و مدل‌ها را با دستور **ollama pull** دانلود کنید.
 
 
-## 📖 Documentation
+## 📖 مستندات
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1sEZBonBMGP44CtO6GQTwAlL0BGJXjtfd?usp=sharing)
 
-The documentation for ScrapeGraphAI can be found [here](https://docs.scrapegraphai.com/introduction).
-## 🆚 Open Source vs Managed API
+مستندات ScrapeGraphAI را می‌توانید [اینجا](https://docs.scrapegraphai.com/introduction) بیابید.
+## 🆚 نسخهٔ متن‌باز در برابر API مدیریت‌شده
 
-ScrapeGraphAI comes in two flavours: **this open-source library**, which you run yourself, and the **managed cloud API** (used via the [Python](https://github.com/ScrapeGraphAI/scrapegraph-py) and [JS/TS](https://github.com/ScrapeGraphAI/scrapegraph-js) SDKs). This table explains the difference so you can pick the right one.
+ScrapeGraphAI در دو نسخه ارائه می‌شود: **این کتابخانهٔ متن‌باز** که آن را خودتان اجرا می‌کنید، و **API ابری مدیریت‌شده** (که از طریق SDKهای [Python](https://github.com/ScrapeGraphAI/scrapegraph-py) و [JS/TS](https://github.com/ScrapeGraphAI/scrapegraph-js) استفاده می‌شود). جدول زیر تفاوت آن‌ها را توضیح می‌دهد تا گزینهٔ مناسب خود را انتخاب کنید.
 
-| | Open Source (`scrapegraphai`) | Managed API (`scrapegraph-py` / `scrapegraph-js`) |
+| | متن‌باز (`scrapegraphai`) | API مدیریت‌شده (`scrapegraph-py` / `scrapegraph-js`) |
 |---|---|---|
-| **What it is** | A Python library you run yourself | A hosted cloud service you call via SDK |
-| **Where it runs** | Your own infrastructure (self-hosted) | ScrapeGraphAI cloud |
-| **LLM** | Bring your own (OpenAI, Groq, Gemini, Azure, local via Ollama) | Managed for you |
-| **Browser / JS rendering** | You configure it (Playwright) | Managed (stealth, `auto`/`fast`/`js` modes) |
-| **Proxies & anti-bot** | Your responsibility | Included |
-| **Scaling & maintenance** | Your responsibility | Fully managed |
-| **Cost model** | LLM tokens + your own infra | Pay-as-you-go credits |
-| **Auth** | Your own LLM keys | `SGAI_API_KEY` |
-| **Capabilities** | Graph pipelines (SmartScraper, Search, Speech, ScriptCreator…) | Scrape, Extract, Search, Crawl, Monitor, History |
-| **Setup effort** | More configuration | Minimal — API key + one call |
-| **License** | MIT | SDK is MIT; the API service is paid |
+| **چیست؟** | یک کتابخانهٔ پایتونی که خودتان اجرا می‌کنید | یک سرویس ابری میزبانی‌شده که از طریق SDK فراخوانی می‌شود |
+| **کجا اجرا می‌شود** | زیرساخت خودتان (self-hosted) | ابر ScrapeGraphAI |
+| **LLM** | مدل خودتان را بیاورید (OpenAI، Groq، Gemini، Azure، مدل محلی با Ollama) | به‌صورت مدیریت‌شده |
+| **مرورگر / رندر JS** | خودتان پیکربندی می‌کنید (Playwright) | مدیریت‌شده (حالت‌های stealth و `auto`/`fast`/`js`) |
+| **پروکسی و ضدربات** | مسئولیتش با شماست | شامل می‌شود |
+| **مقیاس‌پذیری و نگهداری** | مسئولیتش با شماست | کاملاً مدیریت‌شده |
+| **مدل هزینه** | توکن‌های LLM + زیرساخت خودتان | اعتباری و به‌مصرف (pay-as-you-go) |
+| **احراز هویت** | کلیدهای LLM خودتان | `SGAI_API_KEY` |
+| **قابلیت‌ها** | پایپ‌لاین‌های گرافی (SmartScraper، Search، Speech، ScriptCreator…) | Scrape، Extract، Search، Crawl، Monitor، History |
+| **میزان زحمت راه‌اندازی** | پیکربندی بیشتر | حداقلی — یک کلید API و یک فراخوانی |
+| **مجوز** | MIT | SDK با مجوز MIT ارائه می‌شود؛ سرویس API پرداختی است |
 
-**Choose the open-source library** if you want full control, on-prem/self-hosted data, local LLMs (Ollama), or fine-grained cost tuning — and you're happy to manage browsers, proxies and scaling yourself.
+**کتابخانهٔ متن‌باز را انتخاب کنید** اگر کنترل کامل، داده‌های روی‌پریم/خودمیزبان، LLMهای محلی (Ollama) یا تنظیم دقیق هزینه را می‌خواهید — و راضی هستید مدیریت مرورگر، پروکسی و مقیاس‌پذیری را خودتان به عهده بگیرید.
 
-**Choose the managed API** if you want zero infrastructure, managed JS rendering & anti-bot, built-in **Crawl** and scheduled **Monitor** jobs, and the fastest path to production — billed per credit.
+**API مدیریت‌شده را انتخاب کنید** اگر هیچ زیرساختی نمی‌خواهید، رندر JS و ضدرباتِ مدیریت‌شده، قابلیت‌های داخلی **Crawl** و کارهای زمان‌بندی‌شدهٔ **Monitor** و سریع‌ترین مسیر رسیدن به محیط عملیاتی را می‌خواهید — با پرداخت به‌ازای اعتبار.
 
-- Open-source library: https://github.com/ScrapeGraphAI/Scrapegraph-ai
-- Python SDK: https://github.com/ScrapeGraphAI/scrapegraph-py
-- JS/TS SDK: https://github.com/ScrapeGraphAI/scrapegraph-js
-- API docs: https://docs.scrapegraphai.com/introduction
+- کتابخانهٔ متن‌باز: https://github.com/ScrapeGraphAI/Scrapegraph-ai
+- SDK پایتون: https://github.com/ScrapeGraphAI/scrapegraph-py
+- SDK زبان JS/TS: https://github.com/ScrapeGraphAI/scrapegraph-js
+- مستندات API: https://docs.scrapegraphai.com/introduction
 
-## 🏆 Sponsors
+## 🏆 حامیان
 
 [![NodeMaven](docs/assets/nodemaven-banner.png)](https://go.nodemaven.com/scrapegraphyai)
 
-Codes for ScrapeGraphAI users: `SCRAPEGRAPH35` (35% off mobile and residential proxies), `SCRAPEGRAPH40` (40% off ISP / static proxies).
+کدهای تخفیف مخصوص کاربران ScrapeGraphAI: `SCRAPEGRAPH35` (۳۵٪ تخفیف روی پروکسی‌های موبایل و رزیدنشیال)، `SCRAPEGRAPH40` (۴۰٪ تخفیف روی پروکسی‌های ISP / استاتیک).
 
-## 🤝 Contributing
+## 🤝 مشارکت
 
-Feel free to contribute and join our Discord server to discuss with us improvements and give us suggestions!
+برای مشارکت خوش‌آمد می‌گوییم؛ به سرور Discord ما بپیوندید تا دربارهٔ بهبودها گفت‌وگو کنیم و پیشنهادهایتان را با ما در میان بگذارید!
 
-Please see the [contributing guidelines](https://github.com/ScrapeGraphAI/Scrapegraph-ai/blob/main/CONTRIBUTING.md).
+لطفاً [راهنمای مشارکت](https://github.com/ScrapeGraphAI/Scrapegraph-ai/blob/main/CONTRIBUTING.md) را ببینید.
 
 [![My Skills](https://skillicons.dev/icons?i=discord)](https://discord.gg/uJN7TYcpNa)
 [![My Skills](https://skillicons.dev/icons?i=linkedin)](https://www.linkedin.com/company/scrapegraphai/)
 [![My Skills](https://skillicons.dev/icons?i=twitter)](https://twitter.com/scrapegraphai)
 
-## 🔗 ScrapeGraph API & SDKs
-If you are looking for a quick solution to integrate ScrapeGraph in your system, check out our powerful API [here!](https://scrapegraphai.com)
+## 🔗 ScrapeGraph API و SDKها
+اگر به‌دنبال راه‌حل سریعی برای یکپارچه‌سازی ScrapeGraph در سیستم خود هستید، API قدرتمند ما را [اینجا](https://scrapegraphai.com) ببینید!
 
 [![API Banner](https://raw.githubusercontent.com/ScrapeGraphAI/Scrapegraph-ai/main/docs/assets/api_banner.png)](https://scrapegraphai.com)
 
-We offer SDKs in both Python and Node.js, making it easy to integrate into your projects. Check them out below:
+ما هم SDK پایتون و هم Node.js ارائه می‌دهیم تا یکپارچه‌سازی در پروژه‌هایتان آسان شود. آن‌ها را در زیر ببینید:
 
-| SDK       | Language | GitHub Link                                                                 |
+| SDK       | زبان    | لینک GitHub                                                                 |
 |-----------|----------|-----------------------------------------------------------------------------|
-| Python SDK | Python   | [scrapegraph-py](https://docs.scrapegraphai.com/sdks/python) |
-| Node.js SDK | Node.js  | [scrapegraph-js](https://docs.scrapegraphai.com/sdks/javascript) |
+| SDK پایتون | Python   | [scrapegraph-py](https://docs.scrapegraphai.com/sdks/python) |
+| SDK Node.js | Node.js  | [scrapegraph-js](https://docs.scrapegraphai.com/sdks/javascript) |
 
-The Official API Documentation can be found [here](https://docs.scrapegraphai.com/introduction).
+مستندات رسمی API را می‌توانید [اینجا](https://docs.scrapegraphai.com/introduction) بیابید.
 
-## 📈 Telemetry
-We collect anonymous usage metrics to enhance our package's quality and user experience. The data helps us prioritize improvements and ensure compatibility. If you wish to opt-out, set the environment variable SCRAPEGRAPHAI_TELEMETRY_ENABLED=false. For more information, please refer to the documentation [here](https://docs.scrapegraphai.com/introduction).
+## 📈 تله‌متری
+ما متریک‌های استفادهٔ ناشناس جمع‌آوری می‌کنیم تا کیفیت پکیج و تجربهٔ کاربری آن را ارتقا دهیم. این داده‌ها به ما کمک می‌کند اولویت بهبودها را مشخص کنیم و سازگاری را تضمین کنیم. اگر می‌خواهید آن را غیرفعال کنید، متغیر محیطی SCRAPEGRAPHAI_TELEMETRY_ENABLED=false را تنظیم کنید. برای اطلاعات بیشتر به مستندات [اینجا](https://docs.scrapegraphai.com/introduction) مراجعه کنید.
 
-## ❤️ Contributors
+## ❤️ مشارکت‌کنندگان
 [![Contributors](https://contrib.rocks/image?repo=ScrapeGraphAI/Scrapegraph-ai)](https://github.com/ScrapeGraphAI/Scrapegraph-ai/graphs/contributors)
 
-## 🎓 Citations
-If you have used our library for research purposes please quote us with the following reference:
+## 🎓 استناد
+اگر از این کتابخانه برای مقاصد پژوهشی استفاده کرده‌اید، لطفاً با مرجع زیر به ما استناد کنید:
 ```text
   @misc{scrapegraph-ai,
     author = {Lorenzo Padoan, Marco Vinciguerra},
@@ -245,22 +264,22 @@ If you have used our library for research purposes please quote us with the foll
     note = {A Python library for scraping leveraging large language models}
   }
 ```
-## Authors
+## نویسندگان
 
-|                    | Contact Info         |
+|                    | اطلاعات تماس         |
 |--------------------|----------------------|
 | Marco Vinciguerra  | [![Linkedin Badge](https://img.shields.io/badge/-Linkedin-blue?style=flat&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/marco-vinciguerra-7ba365242/)    |
 | Lorenzo Padoan     | [![Linkedin Badge](https://img.shields.io/badge/-Linkedin-blue?style=flat&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/lorenzo-padoan-4521a2154/)  |
 
-## 📜 License
+## 📜 مجوز
 
-ScrapeGraphAI is licensed under the MIT License. See the [LICENSE](https://github.com/ScrapeGraphAI/Scrapegraph-ai/blob/main/LICENSE) file for more information.
+ScrapeGraphAI تحت مجوز MIT منتشر شده است. برای اطلاعات بیشتر، فایل [LICENSE](https://github.com/ScrapeGraphAI/Scrapegraph-ai/blob/main/LICENSE) را ببینید.
 
-## Acknowledgements
+## قدردانی‌ها
 
-- We would like to thank all the contributors to the project and the open-source community for their support.
-- ScrapeGraphAI is meant to be used for data exploration and research purposes only. We are not responsible for any misuse of the library.
+- از همهٔ مشارکت‌کنندگان پروژه و جامعهٔ متن‌باز برای حمایت‌شان سپاسگزاریم.
+- ScrapeGraphAI فقط برای مقاصد اکتشاف داده و پژوهش در نظر گرفته شده است. ما مسئولیت هیچ‌گونه سوءاستفاده از این کتابخانه را نمی‌پذیریم.
 
-Made with ❤️ by [ScrapeGraph AI](https://scrapegraphai.com)
+ساخته‌شده با ❤️ توسط [ScrapeGraph AI](https://scrapegraphai.com)
 
 [Scarf tracking](https://static.scarf.sh/a.png?x-pxid=102d4b8c-cd6a-4b9e-9a16-d6d141b9212d)

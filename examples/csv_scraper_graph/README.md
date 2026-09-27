@@ -1,21 +1,21 @@
-# CSV Scraper Graph Example
+# مثال گراف اسکرپر CSV (CSV Scraper Graph)
 
-This example demonstrates how to use Scrapegraph-ai to extract data from web sources and save it in CSV format.
+این مثال نشان می‌دهد چگونه می‌توان با Scrapegraph-ai داده را از منابع وب استخراج و در قالب CSV ذخیره کرد.
 
-## Features
+## قابلیت‌ها
 
-- Table data extraction
-- CSV formatting
-- Data cleaning
-- Structured output
+- استخراج دادهٔ جدولی
+- قالب‌بندی CSV
+- پاک‌سازی داده
+- خروجی ساخت‌یافته
 
-## Setup
+## راه‌اندازی
 
-1. Install required dependencies
-2. Copy `.env.example` to `.env`
-3. Configure your API keys in the `.env` file
+1. وابستگی‌های مورد نیاز را نصب کنید
+2. فایل `.env.example` را به `.env` کپی کنید
+3. کلیدهای API خود را در فایل `.env` پیکربندی کنید
 
-## Usage
+## نحوهٔ استفاده
 
 ```python
 from scrapegraphai.graphs import CsvScraperGraph
@@ -24,7 +24,7 @@ graph = CsvScraperGraph()
 csv_data = graph.scrape("https://example.com/table")
 ```
 
-## Environment Variables
+## متغیرهای محیطی
 
-Required environment variables:
-- `OPENAI_API_KEY`: Your OpenAI API key
+متغیرهای محیطی مورد نیاز:
+- `OPENAI_API_KEY`: کلید API شرکت OpenAI شما

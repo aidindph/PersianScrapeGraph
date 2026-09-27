@@ -1,21 +1,21 @@
-# Speech Graph Example
+# مثال گراف گفتار (Speech Graph)
 
-This example demonstrates how to use Scrapegraph-ai for speech processing and analysis.
+این مثال نشان می‌دهد چگونه می‌توان از Scrapegraph-ai برای پردازش و تحلیل گفتار استفاده کرد.
 
-## Features
+## قابلیت‌ها
 
-- Speech-to-text conversion
-- Audio processing
-- Text analysis
-- Sentiment analysis
+- تبدیل گفتار به متن (speech-to-text)
+- پردازش صوت
+- تحلیل متن
+- تحلیل احساسات (sentiment analysis)
 
-## Setup
+## راه‌اندازی
 
-1. Install required dependencies
-2. Copy `.env.example` to `.env`
-3. Configure your API keys in the `.env` file
+1. وابستگی‌های مورد نیاز را نصب کنید
+2. فایل `.env.example` را به `.env` کپی کنید
+3. کلیدهای API خود را در فایل `.env` پیکربندی کنید
 
-## Usage
+## نحوهٔ استفاده
 
 ```python
 from scrapegraphai.graphs import SpeechGraph
@@ -24,8 +24,8 @@ graph = SpeechGraph()
 text = graph.process("audio_file.mp3")
 ```
 
-## Environment Variables
+## متغیرهای محیطی
 
-Required environment variables:
-- `OPENAI_API_KEY`: Your OpenAI API key
-- `WHISPER_API_KEY`: Your Whisper API key (optional)
+متغیرهای محیطی مورد نیاز:
+- `OPENAI_API_KEY`: کلید API شرکت OpenAI شما
+- `WHISPER_API_KEY`: کلید API سرویس Whisper شما (اختیاری)

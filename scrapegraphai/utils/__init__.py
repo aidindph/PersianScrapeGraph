@@ -1,5 +1,6 @@
 """
-__init__.py file for utils folder
+این ماژول ابزارهای کمکی ScrapeGraphAI (لاگینگ، پاک‌سازی HTML،
+تبدیل قالب‌ها و…) را جمع‌آوری و صادر می‌کند.
 """
 
 from .cleanup_code import extract_code

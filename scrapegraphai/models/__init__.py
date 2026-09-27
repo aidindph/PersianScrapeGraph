@@ -1,5 +1,6 @@
 """
-This module contains the model definitions used in the ScrapeGraphAI application.
+این ماژول wrapperهای LLM (مانند DeepSeek، MiniMax، XAI و…) و فرادادهٔ مدل‌های
+مورد استفاده در ScrapeGraphAI را در اختیار می‌گذارد.
 """
 
 from .atlascloud import AtlasCloud

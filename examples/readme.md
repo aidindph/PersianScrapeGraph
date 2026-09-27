@@ -1,37 +1,38 @@
-# 🕷️ Scrapegraph-ai Examples
+# 🕷️ مثال‌های Scrapegraph-ai
 
-This directory contains various example implementations of Scrapegraph-ai for different use cases. Each example demonstrates how to leverage the power of Scrapegraph-ai for specific scenarios.
+این پوشه شامل پیاده‌سازی‌های نمونهٔ متنوعی از Scrapegraph-ai برای سناریوهای مختلف است. هر مثال نشان می‌دهد چگونه می‌توان توانایی‌های Scrapegraph-ai را برای موقعیت‌های خاص به کار گرفت.
 
-> **Note:** While these examples showcase implementations using OpenAI and Ollama, Scrapegraph-ai supports many other LLM providers! Check out our [documentation](https://docs.scrapegraphai.com/introduction) for the full list of supported providers.
+> **نکته:** هرچند این مثال‌ها با OpenAI و Ollama پیاده‌سازی شده‌اند، Scrapegraph-ai از سرویس‌دهنده‌های LLM بسیار دیگری هم پشتیبانی می‌کند! فهرست کامل سرویس‌دهنده‌های پشتیبانی‌شده را در [مستندات](https://docs.scrapegraphai.com/introduction) ما ببینید.
 
-## 📚 Available Examples
+## 📚 مثال‌های موجود
 
-- 🧠 `smart_scraper/` - Advanced web scraping with intelligent content extraction
-- 🔎 `search_graph/` - Web search and data retrieval
-- ⚙️ `script_generator_graph/` - Automated script generation
-- 🌐 `depth_search_graph/` - Deep web crawling and content exploration
-- 📊 `csv_scraper_graph/` - Scraping and processing data into CSV format
-- 📑 `xml_scraper_graph/` - XML data extraction and processing
-- 🎤 `speech_graph/` - Speech processing and analysis
-- 🔄 `omni_scraper_graph/` - Universal web scraping for multiple data types
-- 🔍 `omni_search_graph/` - Comprehensive search across multiple sources
-- 📄 `document_scraper_graph/` - Document parsing and data extraction
-- 🛠️ `custom_graph/` - Custom graph implementation examples
-- 💻 `code_generator_graph/` - Code generation utilities
-- 📋 `json_scraper_graph/` - JSON data extraction and processing
-- 📋 `colab example`:
+- 🧠 `smart_scraper/` - اسکرپینگ پیشرفتهٔ وب با استخراج هوشمند محتوا
+- 🔎 `search_graph/` - جست‌وجوی وب و بازیابی داده
+- ⚙️ `script_generator_graph/` - تولید خودکار اسکریپت
+- 🌐 `depth_search_graph/` - پیمایش عمیق وب و کاوش محتوا
+- 📊 `csv_scraper_graph/` - استخراج داده از وب و تبدیل آن به قالب CSV
+- 📑 `xml_scraper_graph/` - استخراج و پردازش دادهٔ XML
+- 🎤 `speech_graph/` - پردازش و تحلیل گفتار
+- 🔄 `omni_scraper_graph/` - اسکرپینگ همه‌منظوره برای انواع داده
+- 🔍 `omni_search_graph/` - جست‌وجوی جامع در چند منبع
+- 📄 `document_scraper_graph/` - تجزیهٔ اسناد و استخراج داده
+- 🛠️ `custom_graph/` - نمونه‌های پیاده‌سازی گراف سفارشی
+- 💻 `code_generator_graph/` - ابزارهای تولید کد
+- 📋 `json_scraper_graph/` - استخراج و پردازش دادهٔ JSON
+- 🇮🇷 `persian/` - مثال‌های فارسی با پرومپت و کامنت فارسی
+- 📋 `مثال Colab`:
 <a target="_blank" href="https://colab.research.google.com/drive/1sEZBonBMGP44CtO6GQTwAlL0BGJXjtfd?usp=sharing#scrollTo=vGDjka17pqqg">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>
 
-## 🚀 Getting Started
+## 🚀 شروع به کار
 
-1. Choose the example that best fits your use case
-2. Navigate to the corresponding directory
-3. Follow the README instructions in each directory
-4. Configure any required environment variables using the provided `.env.example` files
+1. مثالی را انتخاب کنید که بیشترین تناسب را با مورد استفادهٔ شما دارد
+2. به پوشهٔ مربوط به آن بروید
+3. دستورالعمل‌های README هر پوشه را دنبال کنید
+4. متغیرهای محیطی مورد نیاز را با استفاده از فایل‌های `.env.example` ارائه‌شده پیکربندی کنید
 
-## ⚡ Quick Setup
+## ⚡ راه‌اندازی سریع
 
 ```bash
 pip install scrapegraphai
@@ -45,22 +46,22 @@ cd examples/smart_scraper_graph/openai
 python smart_scraper_openai.py
 ```
 
-## 📋 Requirements
+## 📋 پیش‌نیازها
 
-Each example may have its own specific requirements. Please refer to the individual README files in each directory for detailed setup instructions.
+هر مثال ممکن است پیش‌نیازهای خاص خودش را داشته باشد. برای دستورالعمل‌های دقیق راه‌اندازی، لطفاً به فایل‌های README موجود در هر پوشه مراجعه کنید.
 
-## 📚 Additional Resources
+## 📚 منابع بیشتر
 
-- 📖 [Full Documentation](https://docs.scrapegraphai.com/introduction)
-- 💡 [Examples Repository](https://github.com/ScrapeGraphAI/ScrapegraphLib-Examples)
-- 🤝 [Community Support](https://github.com/ScrapeGraphAI/scrapegraph-ai/discussions)
+- 📖 [مستندات کامل](https://docs.scrapegraphai.com/introduction)
+- 💡 [ریپازیتوری مثال‌ها](https://github.com/ScrapeGraphAI/ScrapegraphLib-Examples)
+- 🤝 [پشتیبانی جامعه](https://github.com/ScrapeGraphAI/scrapegraph-ai/discussions)
 
-## 🤔 Need Help?
+## 🤔 کمک لازم دارید؟
 
-- Check out our [documentation](https://docs.scrapegraphai.com/introduction)
-- Join our [Discord community](https://discord.gg/scrapegraphai)
-- Open an [issue](https://github.com/ScrapeGraphAI/scrapegraph-ai/issues)
+- نگاهی به [مستندات](https://docs.scrapegraphai.com/introduction) ما بیندازید
+- به [جامعهٔ Discord](https://discord.gg/scrapegraphai) ما بپیوندید
+- یک [issue](https://github.com/ScrapeGraphAI/scrapegraph-ai/issues) باز کنید
 
 ---
 
-⭐ Don't forget to star our repository if you find these examples helpful!
+⭐ اگر این مثال‌ها برایتان مفید بود، فراموش نکنید به ریپازیتوری ما ستاره بدهید!

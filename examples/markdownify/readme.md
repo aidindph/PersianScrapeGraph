@@ -1,15 +1,15 @@
-# Markdownify Graph Example
+# مثال گراف Markdownify
 
-This example demonstrates how to use the Markdownify graph to convert HTML content to Markdown format.
+این مثال نشان می‌دهد چگونه می‌توان با گراف Markdownify، محتوای HTML را به قالب Markdown تبدیل کرد.
 
-## Features
+## قابلیت‌ها
 
-- Convert HTML content to clean, readable Markdown
-- Support for both URL and direct HTML input
-- Maintains formatting and structure of the original content
-- Handles complex HTML elements and nested structures
+- تبدیل محتوای HTML به Markdownِ تمیز و خوانا
+- پشتیبانی از هر دو نوع ورودی URL و HTML مستقیم
+- حفظ قالب‌بندی و ساختار محتوای اصلی
+- مدیریت عناصر پیچیدهٔ HTML و ساختارهای تو در تو
 
-## Usage
+## نحوهٔ استفاده
 
 ```python
 from scrapegraphai import Client
@@ -40,36 +40,36 @@ response = sgai_client.markdownify(
 print(response.markdown)
 ```
 
-## Parameters
+## پارامترها
 
-The `markdownify` method accepts the following parameters:
+متد `markdownify` پارامترهای زیر را می‌پذیرد:
 
-- `website_url` (str, optional): The URL of the website to convert to Markdown
-- `html_content` (str, optional): Direct HTML content to convert to Markdown
+- `website_url` (str، اختیاری): URL وب‌سایتی که باید به Markdown تبدیل شود
+- `html_content` (str، اختیاری): محتوای HTML مستقیم برای تبدیل به Markdown
 
-Note: You must provide either `website_url` or `html_content`, but not both.
+نکته: باید یا `website_url` و یا `html_content` را بدهید، نه هر دو.
 
-## Response
+## پاسخ (Response)
 
-The response object contains:
+شیء پاسخ شامل این موارد است:
 
-- `markdown` (str): The converted Markdown content
-- `metadata` (dict): Additional information about the conversion process
+- `markdown` (str): محتوای Markdown تبدیل‌شده
+- `metadata` (dict): اطلاعات تکمیلی دربارهٔ فرایند تبدیل
 
-## Error Handling
+## مدیریت خطا
 
-The graph handles various edge cases:
+این گراف موارد مرزی مختلفی را مدیریت می‌کند:
 
-- Invalid URLs
-- Malformed HTML
-- Network errors
-- Timeout issues
+- URLهای نامعتبر
+- HTML بدشکل
+- خطاهای شبکه
+- مشکلات timeout
 
-If an error occurs, it will be logged and raised with appropriate error messages.
+اگر خطایی رخ دهد، ثبت (log) می‌شود و همراه با پیام خطای مناسب raise می‌شود.
 
-## Best Practices
+## بهترین شیوه‌ها
 
-1. Always provide a valid URL or well-formed HTML content
-2. Use appropriate logging levels for debugging
-3. Handle the response appropriately in your application
-4. Consider rate limiting for large-scale conversions
+1. همیشه یک URL معتبر یا محتوای HTMLِ خوش‌ساخت ارائه دهید
+2. برای اشکال‌زدایی از سطوح مناسب logging استفاده کنید
+3. پاسخ را در برنامهٔ خود به‌درستی مدیریت کنید
+4. برای تبدیل‌های در مقیاس بزرگ، محدودیت نرخ درخواست (rate limiting) را در نظر بگیرید

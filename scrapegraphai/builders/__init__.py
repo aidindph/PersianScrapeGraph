@@ -1,5 +1,6 @@
 """
-This module contains the builders for constructing various components in the ScrapeGraphAI application.
+این ماژول سازنده‌های (builders) اجزای مختلف ScrapeGraphAI —
+از جمله ساخت گراف سفارشی — را در اختیار می‌گذارد.
 """
 
 from .graph_builder import GraphBuilder

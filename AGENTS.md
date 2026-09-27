@@ -1,12 +1,12 @@
 # AGENTS.md
 
-Instructions for AI coding agents (Claude Code, Codex, Cursor, Copilot agents, …)
-working on **ScrapeGraphAI**. Human contributors should read
-[CONTRIBUTING.md](CONTRIBUTING.md); everything here is in addition to it.
+راهنمای عامل‌های کدنویسی هوش مصنوعی (Claude Code، Codex، Cursor، عامل‌های Copilot و…) که روی
+**ScrapeGraphAI** کار می‌کنند. همکاران انسانی باید
+[CONTRIBUTING.md](CONTRIBUTING.md) را بخوانند؛ هر آنچه اینجا آمده، در کنار همان راهنما اعمال می‌شود.
 
 ---
 
-## ⚠️ 0. PersianScrapeGraph fork rule (mandatory — enforced by CI)
+## ⚠️ 0. قانون فورک PersianScrapeGraph (الزامی — با CI اجرا می‌شود)
 
 This repository is the **PersianScrapeGraph** fork
 (origin: `github.com/aidindph/PersianScrapeGraph`,
@@ -14,27 +14,31 @@ upstream: `github.com/ScrapeGraphAI/Scrapegraph-ai`).
 
 > **All commits and pushes MUST be authored by
 > `Aidin Ghassemi <aidindph@users.noreply.github.com>`.**
+>
+> **تمام کامیت‌ها و پوش‌ها باید به نام
+> `Aidin Ghassemi <aidindph@users.noreply.github.com>` انجام شوند.**
 
-The pre-commit hook (`scripts/check-commit-author.sh`) and the
-`Commit Author Policy` CI workflow (`.github/workflows/commit-author-check.yml`)
-automatically **reject anything else**. Configure once, right after cloning:
+pre-commit hook (`scripts/check-commit-author.sh`) و
+workflow ‏CI با عنوان `Commit Author Policy`
+(`.github/workflows/commit-author-check.yml`)
+هر چیز دیگری را به‌صورت خودکار **رد می‌کنند**. یک‌بار، بلافاصله پس از clone، پیکربندی کنید:
 
 ```bash
 git config user.name  "Aidin Ghassemi"
 git config user.email "aidindph@users.noreply.github.com"
 ```
 
-Full details: [CONTRIBUTING.md](CONTRIBUTING.md).
+جزئیات کامل: [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ---
 
-## 1. Golden rule: everything goes to `pre/beta`
+## 1. قانون طلایی: همه‌چیز به `pre/beta` می‌رود
 
-**`main` is never written to directly. All work is based on and merged into `pre/beta`.**
+**به شاخهٔ `main` هرگز مستقیم کاری نمی‌کنیم. تمام کارها بر پایهٔ `pre/beta` انجام و به آن merge می‌شوند.**
 
-`pre/beta` is the prerelease branch: pushes to it publish a `beta` prerelease via
-semantic-release (see `.releaserc.yml`). `main` only receives releases when a
-maintainer promotes `pre/beta`.
+`pre/beta` شاخهٔ پیش‌انتشار است: هر push به این شاخه از طریق
+semantic-release (نگاه کنید به `.releaserc.yml`) یک پیش‌انتشار `beta` منتشر می‌کند.
+شاخهٔ `main` فقط زمانی release دریافت می‌کند که یک نگهدارنده، `pre/beta` را ارتقا دهد.
 
 ```bash
 # 1. always start from an up-to-date pre/beta
@@ -50,29 +54,29 @@ git push -u origin feat/my-change
 gh pr create --base pre/beta --title "feat(nodes): add X" --body "..."
 ```
 
-Checklist before you commit:
+چک‌لیست قبل از کامیت:
 
-- [ ] The branch is based on `origin/pre/beta` (`git merge-base --is-ancestor origin/pre/beta HEAD`).
-- [ ] The PR base is `pre/beta`, **not** `main`.
-- [ ] No commits directly on `main` or `pre/beta`, no force-push to either.
-- [ ] One logical change per branch/PR.
+- [ ] شاخه بر پایهٔ `origin/pre/beta` است (`git merge-base --is-ancestor origin/pre/beta HEAD`).
+- [ ] شاخهٔ پایهٔ PR برابر `pre/beta` است، **نه** `main`.
+- [ ] هیچ کامیت مستقیمی روی `main` یا `pre/beta` وجود ندارد و force-push روی هیچ‌کدام انجام نشده است.
+- [ ] هر شاخه/PR فقط شامل یک تغییر منطقی است.
 
-If a task genuinely requires targeting `main` (e.g. a hotfix on a released
-version), stop and ask a maintainer first.
+اگر کاری واقعاً نیاز به هدف‌گیری `main` دارد (مثلاً هات‌فیکس روی یک نسخهٔ منتشرشده)،
+اول متوقف شوید و از یک نگهدارنده بپرسید.
 
-## 2. Environment setup
+## 2. راه‌اندازی محیط
 
-Python `>=3.12`, dependencies managed with [uv](https://docs.astral.sh/uv/):
+پایتون `>=3.12` و مدیریت وابستگی‌ها با [uv](https://docs.astral.sh/uv/):
 
 ```bash
 uv sync                     # create the venv and install deps
 uv run pre-commit install   # install the git hooks
 ```
 
-Never hand-edit `uv.lock`; regenerate it with `uv lock` / `uv sync` and commit
-the result only when you actually changed dependencies in `pyproject.toml`.
+هرگز `uv.lock` را دستی ویرایش نکنید؛ آن را با `uv lock` / `uv sync` بازتولید کنید و فقط زمانی
+نتیجه را کامیت کنید که واقعاً وابستگی‌های `pyproject.toml` را تغییر داده باشید.
 
-## 3. Checks to run before pushing
+## 3. بررسی‌هایی که قبل از push باید اجرا شوند
 
 ```bash
 make lint         # ruff + black --check + isort --check-only
@@ -81,17 +85,17 @@ make test         # pytest with coverage
 make pre-commit   # run all hooks on all files
 ```
 
-Run at least `make lint` and the tests covering what you touched. Report the
-real result: if something fails or you skipped a step, say so in the PR
-description instead of implying a clean run.
+حداقل `make lint` و تست‌های مربوط به بخش‌هایی که تغییر داده‌اید را اجرا کنید. نتیجهٔ
+واقعی را گزارش کنید: اگر چیزی fail شد یا مرحله‌ای را رد کردید، آن را در توضیحات PR
+بگویید، نه اینکه القا کنید همه‌چیز تمیز بوده است.
 
-Style: PEP 8 + Google Python docstrings, `black` formatting, line length 88.
-Match the conventions of the surrounding file rather than introducing new ones.
+سبک: PEP 8 + docstringهای سبک Google Python، قالب‌بندی `black`، طول خط ۸۸.
+با قواعد حاکم بر فایل اطراف هماهنگ باشید، به‌جای اینکه قواعد جدیدی وارد کنید.
 
-## 4. Commit messages
+## 4. پیام‌های کامیت
 
-Commits are parsed by semantic-release (Conventional Commits, `conventionalcommits`
-preset), so the message decides the next version number. Use:
+پیام‌های کامیت توسط semantic-release (Conventional Commits، پیش‌تنظیم
+`conventionalcommits`) تجزیه می‌شوند؛ بنابراین پیام کامیت شمارهٔ نسخهٔ بعدی را تعیین می‌کند. استفاده کنید:
 
 ```
 feat:     ✨ new feature          -> minor bump
@@ -106,24 +110,24 @@ ci:       🤖 CI configuration
 chore:    🧹 everything else
 ```
 
-Format: `type(optional-scope): imperative summary`, optional body, and
-`BREAKING CHANGE:` in the footer for incompatible changes. Reference issues with
-`Fixes #123`.
+قالب: `type(optional-scope): imperative summary`، به‌همراه بدنهٔ اختیاری و
+`BREAKING CHANGE:` در پاورقی برای تغییرات ناسازگار. برای ارجاع به issueها از
+`Fixes #123` استفاده کنید.
 
-## 5. Files agents must not touch
+## 5. فایل‌هایی که عامل‌ها نباید تغییر دهند
 
-- `CHANGELOG.md` and the `version` field in `pyproject.toml` — owned by
-  semantic-release; editing them by hand breaks releases.
-- Git tags and release notes on GitHub.
-- `.github/workflows/*` — only when the task is explicitly about CI.
-- Anything under `htmlcov/`, `coverage.xml`, `.pytest_cache/`, `__pycache__/`:
-  build artifacts, never commit them.
+- `CHANGELOG.md` و فیلد `version` در `pyproject.toml` — مالکشان
+  semantic-release است؛ ویرایش دستی آن‌ها انتشارها را خراب می‌کند.
+- تگ‌های git و یادداشت‌های انتشار روی GitHub.
+- `.github/workflows/*` — فقط وقتی که موضوعِ کار خودِ CI باشد.
+- هر چیزی زیر `htmlcov/`، `coverage.xml`، `.pytest_cache/`، `__pycache__/`:
+  خروجی‌های build هستند و هرگز نباید کامیت شوند.
 
-Also: never commit secrets. API keys go in a local `.env` (git-ignored) and are
-read via `os.getenv`; examples and tests must use placeholders such as
-`OPENAI_APIKEY` from the environment.
+همچنین: هرگز secret کامیت نکنید. کلیدهای API در یک فایل `.env` محلی (که git آن را نادیده می‌گیرد)
+قرار می‌گیرند و با `os.getenv` خوانده می‌شوند؛ مثال‌ها و تست‌ها باید از placeholderهایی مانند
+`OPENAI_APIKEY` از محیط استفاده کنند.
 
-## 6. Repository layout
+## 6. ساختار ریپازیتوری
 
 ```
 scrapegraphai/
@@ -140,19 +144,18 @@ tests/             # pytest suite, mirrors the package layout
 docs/              # documentation sources
 ```
 
-When adding a node or graph, register it in the corresponding `__init__.py` and
-add a test under `tests/` next to the existing ones for that layer. New
-user-facing features need an entry in `examples/` and, when they change public
-behaviour, a docs update.
+هنگام افزودن node یا graph جدید، آن را در `__init__.py` مربوطه ثبت کنید و
+کنار تست‌های موجود آن لایه، یک تست زیر `tests/` اضافه کنید. قابلیت‌های جدیدِ
+روی کاربر باید در `examples/` مدخلی داشته باشند و اگر رفتار عمومی را تغییر می‌دهند، مستندات هم به‌روز شود.
 
-## 7. Working style expected from agents
+## 7. سبک کاری مورد انتظار از عامل‌ها
 
-- Prefer small, reviewable diffs; do not reformat or "clean up" untouched files.
-- Do not add dependencies unless the task requires it — say why in the PR.
-- Write all commits, PR titles/bodies, issue comments, code comments and
-  docstrings **in English**.
-- Do not delete or rewrite existing tests to make a change pass.
-- If a test is already failing on `pre/beta`, mention it rather than silently
-  fixing unrelated things in the same PR.
-- Never commit other people's in-progress work: check `git status` and stage
-  only the files belonging to your change.
+- diffهای کوچک و قابل بازبینی را ترجیح دهید؛ فایل‌های دست‌نخورده را بازقالب‌بندی یا «تمیز» نکنید.
+- وابستگی جدید اضافه نکنید، مگر اینکه کار به آن نیاز داشته باشد — و دلیلش را در PR بگویید.
+- همهٔ کامیت‌ها، عنوان/متن PRها، کامنت‌های issue، کامنت‌های کد و docstringها را
+  **به انگلیسی** بنویسید.
+- تست‌های موجود را برای رد شدنِ یک تغییر حذف یا بازنویسی نکنید.
+- اگر تستی از قبل روی `pre/beta` fail است، به آن اشاره کنید، به‌جای اینکه بی‌سروصدا
+  چیزهای بی‌ربط را در همان PR درست کنید.
+- هرگز کارِ در جریانِ دیگران را کامیت نکنید: `git status` را بررسی کنید و فقط
+  فایل‌های مربوط به تغییر خودتان را stage کنید.

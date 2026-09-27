@@ -38,30 +38,30 @@ git commit --amend --reset-author --no-edit   # اصلاح نویسنده آخر
 
 ---
 
-# Contributing to ScrapeGraphAI 🚀
+# مشارکت در ScrapeGraphAI 🚀
 
-Hey there! Thanks for checking out **ScrapeGraphAI**! We're excited to have you here! 🎉
+سلام! ممنون که به **ScrapeGraphAI** سر زدید! خوشحالیم که اینجا هستید! 🎉
 
-## Quick Start Guide 🏃‍♂️
+## راهنمای شروع سریع 🏃‍♂️
 
-1. Fork the repository from the **pre/beta branch** 🍴
-2. Clone your fork locally 💻
-3. Install uv (if you haven't):
+1. ریپازیتوری را از **شاخهٔ pre/beta** فورک کنید 🍴
+2. فورک خود را به‌صورت محلی clone کنید 💻
+3. uv را نصب کنید (اگر هنوز نصب نکرده‌اید):
    ```bash
    curl -LsSf https://astral.sh/uv/install.sh | sh
    ```
-4. Run `uv sync` (creates virtual env & installs dependencies) ⚡
-5. Run `uv run pre-commit install` 🔧
-6. Make your awesome changes ✨
-7. Test thoroughly 🧪
-8. Push & open a PR to the pre/beta branch 🎯
+4. دستور `uv sync` را اجرا کنید (محیط مجازی می‌سازد و وابستگی‌ها را نصب می‌کند) ⚡
+5. دستور `uv run pre-commit install` را اجرا کنید 🔧
+6. تغییرات فوق‌العادهٔ خود را اعمال کنید ✨
+7. همه‌چیز را کامل تست کنید 🧪
+8. پوش کنید و برای شاخهٔ pre/beta یک PR باز کنید 🎯
 
-## Contribution Guidelines 📝
+## اصول مشارکت 📝
 
-Keep it clean and simple:
-- Follow our code style (PEP 8 & Google Python Style) 🎨
-- Document your changes clearly 📚
-- Use these commit prefixes for your final PR commit:
+همیشه تمیز و ساده کار کنید:
+- سبک کدنویسی ما را رعایت کنید (PEP 8 و Google Python Style) 🎨
+- تغییرات‌تان را به‌روشنی مستند کنید 📚
+- برای کامیت نهایی PR خود از این پیشوندها استفاده کنید:
   ```
   feat: ✨ New feature
   fix: 🐛 Bug fix
@@ -71,14 +71,14 @@ Keep it clean and simple:
   test: 🧪 Testing
   perf: ⚡ Performance
   ```
-- Be nice to others! 💝
+- با دیگران با احترام رفتار کنید! 💝
 
-## Need Help? 🤔
+## کمک نیاز دارید؟ 🤔
 
-Found a bug or have a cool idea? Open an issue and let's chat! 💬
+باگ پیدا کردید یا ایدهٔ جالبی دارید؟ یک issue باز کنید تا درباره‌اش صحبت کنیم! 💬
 
-## License 📜
+## مجوز 📜
 
-MIT Licensed. See [LICENSE](LICENSE) file for details.
+این پروژه با مجوز MIT منتشر شده است. برای جزئیات، فایل [LICENSE](LICENSE) را ببینید.
 
-Let's build something amazing together! 🌟
+بیایید با هم چیزی شگفت‌انگیز بسازیم! 🌟

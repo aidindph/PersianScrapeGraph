@@ -1,18 +1,18 @@
-# FetchNode Timeout Configuration
+# پیکربندی Timeout برای FetchNode
 
-## Overview
+## نمای کلی
 
-The `FetchNode` in ScrapeGraphAI supports configurable timeouts for all blocking operations to prevent indefinite hangs when fetching web content or parsing files. This feature allows you to control execution time limits for:
+`FetchNode` در ScrapeGraphAI از timeoutهای قابل‌پیکربندی برای همهٔ عملیات مسدودکننده (blocking) پشتیبانی می‌کند تا هنگام دریافت محتوای وب یا تجزیهٔ فایل‌ها، برنامه برای همیشه متوقف نشود. این قابلیت به شما امکان می‌دهد سقف زمان اجرا را برای موارد زیر کنترل کنید:
 
-- HTTP requests (when using `use_soup=True`)
-- PDF file parsing
-- ChromiumLoader operations
+- درخواست‌های HTTP (هنگام استفاده از `use_soup=True`)
+- تجزیهٔ فایلهای PDF
+- عملیات ChromiumLoader
 
-## Configuration
+## پیکربندی
 
-### Default Behavior
+### رفتار پیش‌فرض
 
-By default, `FetchNode` uses a **30-second timeout** for all blocking operations when a `node_config` is provided:
+به‌طور پیش‌فرض، `FetchNode` برای همهٔ عملیات مسدودکننده از **timeout ۳۰ ثانیه‌ای** استفاده می‌کند، به‌شرطی که یک `node_config` داده باشید:
 
 ```python
 from scrapegraphai.nodes import FetchNode
@@ -25,9 +25,9 @@ node = FetchNode(
 )
 ```
 
-### Custom Timeout
+### timeout سفارشی
 
-You can specify a custom timeout value (in seconds) via the `timeout` parameter:
+می‌توانید مقدار سفارشی timeout (به ثانیه) را از طریق پارامتر `timeout` تعیین کنید:
 
 ```python
 # Custom 10-second timeout
@@ -38,9 +38,9 @@ node = FetchNode(
 )
 ```
 
-### Disabling Timeout
+### غیرفعال‌کردن timeout
 
-To disable timeout and allow operations to run indefinitely, set `timeout` to `None`:
+برای غیرفعال‌کردن timeout و اجازهٔ اجرای نامحدود عملیات، مقدار `timeout` را `None` بگذارید:
 
 ```python
 # No timeout - operations will wait indefinitely
@@ -51,9 +51,9 @@ node = FetchNode(
 )
 ```
 
-### No Configuration
+### بدون پیکربندی
 
-If you don't provide any `node_config`, the timeout defaults to `None` (no timeout):
+اگر هیچ `node_config` ارائه نکنید، timeout به‌طور پیش‌فرض `None` است (بدون timeout):
 
 ```python
 # No timeout (backward compatible)
@@ -64,11 +64,11 @@ node = FetchNode(
 )
 ```
 
-## Use Cases
+## موارد کاربرد
 
-### HTTP Requests
+### درخواست‌های HTTP
 
-When `use_soup=True`, the timeout applies to `requests.get()` calls:
+وقتی `use_soup=True` باشد، timeout روی فراخوانی‌های `requests.get()` اعمال می‌شود:
 
 ```python
 node = FetchNode(
@@ -84,7 +84,7 @@ state = {"url": "https://example.com"}
 result = node.execute(state)
 ```
 
-If the timeout is `None`, no timeout parameter is passed to `requests.get()`:
+اگر timeout برابر `None` باشد، هیچ پارامتر timeoutی به `requests.get()` پاس داده نمی‌شود:
 
 ```python
 node = FetchNode(
@@ -97,9 +97,9 @@ node = FetchNode(
 )
 ```
 
-### PDF Parsing
+### تجزیهٔ PDF
 
-The timeout applies to PDF file parsing operations using `PyPDFLoader`:
+timeout روی عملیات تجزیهٔ فایلهای PDF با `PyPDFLoader` اعمال می‌شود:
 
 ```python
 node = FetchNode(
@@ -117,7 +117,7 @@ except TimeoutError as e:
     print(f"PDF parsing took too long: {e}")
 ```
 
-If parsing exceeds the timeout, a `TimeoutError` is raised with a descriptive message:
+اگر تجزیه از timeout فراتر رود، یک `TimeoutError` با پیامی توصیفی raise می‌شود:
 
 ```
 TimeoutError: PDF parsing exceeded timeout of 60 seconds
@@ -125,7 +125,7 @@ TimeoutError: PDF parsing exceeded timeout of 60 seconds
 
 ### ChromiumLoader
 
-The timeout is automatically propagated to `ChromiumLoader` via `loader_kwargs`:
+timeout به‌طور خودکار از طریق `loader_kwargs` به `ChromiumLoader` منتقل می‌شود:
 
 ```python
 node = FetchNode(
@@ -141,7 +141,7 @@ state = {"url": "https://example.com"}
 result = node.execute(state)
 ```
 
-If you need different timeout behavior for ChromiumLoader specifically, you can override it in `loader_kwargs`:
+اگر برای ChromiumLoader به‌طور خاص رفتار متفاوتی می‌خواهید، می‌توانید آن را در `loader_kwargs` بازنویسی کنید:
 
 ```python
 node = FetchNode(
@@ -156,7 +156,7 @@ node = FetchNode(
 )
 ```
 
-## Graph Examples
+## مثال‌های گراف
 
 ### SmartScraperGraph
 
@@ -180,7 +180,7 @@ smart_scraper = SmartScraperGraph(
 result = smart_scraper.run()
 ```
 
-### Custom Graph with FetchNode
+### گراف سفارشی با FetchNode
 
 ```python
 from scrapegraphai.nodes import FetchNode
@@ -199,14 +199,14 @@ fetch_node = FetchNode(
 # Add to graph...
 ```
 
-## Best Practices
+## بهترین شیوه‌ها
 
-1. **Choose appropriate timeouts**: Consider the expected response time of your target websites
-   - Fast APIs: 5-10 seconds
-   - Regular websites: 15-30 seconds
-   - Large PDFs or slow sites: 60+ seconds
+1. **timeoutهای مناسب انتخاب کنید**: به زمان پاسخ مورد انتظار وب‌سایت‌های هدف‌تان فکر کنید
+   - APIهای سریع: ۵ تا ۱۰ ثانیه
+   - وب‌سایت‌های معمولی: ۱۵ تا ۳۰ ثانیه
+   - PDFهای بزرگ یا سایت‌های کند: بیش از ۶۰ ثانیه
 
-2. **Handle TimeoutError**: Always wrap your code in try-except when using timeouts:
+2. **مدیریت TimeoutError**: هنگام استفاده از timeout، کدتان را همیشه داخل try-except بگذارید:
 
 ```python
 try:
@@ -216,7 +216,7 @@ except TimeoutError as e:
     # Handle timeout gracefully
 ```
 
-3. **Use different timeouts for different operations**: Set higher timeouts for PDF parsing and lower for HTTP requests:
+3. **برای عملیات‌های مختلف timeoutهای متفاوت تعیین کنید**: برای تجزیهٔ PDF مقدار بالاتر و برای درخواست‌های HTTP مقدار پایین‌تری بگذارید:
 
 ```python
 # For PDFs
@@ -226,7 +226,7 @@ pdf_node = FetchNode("pdf", ["doc"], {"timeout": 120})
 web_node = FetchNode("url", ["doc"], {"timeout": 15})
 ```
 
-4. **Monitor timeout occurrences**: Log timeout errors to identify problematic sources:
+4. **وقوع timeoutها را پایش کنید**: خطاهای timeout را ثبت (log) کنید تا منابع مشکل‌دار شناسایی شوند:
 
 ```python
 import logging
@@ -239,38 +239,38 @@ except TimeoutError as e:
     logger.warning(f"Timeout for {state.get('url', 'unknown')}: {e}")
 ```
 
-## Implementation Details
+## جزئیات پیاده‌سازی
 
-The timeout feature is implemented using:
+قابلیت timeout با این ابزارها پیاده‌سازی شده است:
 
-- **HTTP requests**: `requests.get(url, timeout=X)` parameter
-- **PDF parsing**: `concurrent.futures.ThreadPoolExecutor` with `future.result(timeout=X)`
-- **ChromiumLoader**: Propagated via `loader_kwargs` dictionary
+- **درخواست‌های HTTP**: پارامتر `requests.get(url, timeout=X)`
+- **تجزیهٔ PDF**: `concurrent.futures.ThreadPoolExecutor` همراه با `future.result(timeout=X)`
+- **ChromiumLoader**: انتقال از طریق دیکشنری `loader_kwargs`
 
-When `timeout=None`, no timeout constraints are applied, allowing operations to run until completion.
+وقتی `timeout=None` باشد، هیچ محدودیت زمانی اعمال نمی‌شود و عملیات‌ها تا اتمام اجرا می‌شوند.
 
-## Troubleshooting
+## رفع اشکال
 
-### Timeout is too short
+### timeout بیش از حد کوتاه است
 
-If you're seeing frequent timeout errors, increase the timeout value:
+اگر مرتباً با خطای timeout روبه‌رو می‌شوید، مقدار timeout را افزایش دهید:
 
 ```python
 node_config = {"timeout": 60}  # Increase from 30 to 60 seconds
 ```
 
-### Need different timeouts for different operations
+### به timeoutهای متفاوت برای عملیات‌های مختلف نیاز دارید
 
-Use separate FetchNode instances with different configurations:
+از نمونه‌های جداگانهٔ FetchNode با پیکربندی‌های متفاوت استفاده کنید:
 
 ```python
 fast_fetcher = FetchNode("url", ["doc"], {"timeout": 10})
 slow_fetcher = FetchNode("pdf", ["doc"], {"timeout": 120})
 ```
 
-### ChromiumLoader timeout not working
+### timeout مربوط به ChromiumLoader کار نمی‌کند
 
-Ensure you're not overriding the timeout in `loader_kwargs`:
+مطمئن شوید timeout را در `loader_kwargs` بازنویسی نکرده‌اید:
 
 ```python
 # ❌ Wrong - explicit loader_kwargs timeout overrides node timeout
@@ -285,8 +285,8 @@ node_config = {
 }
 ```
 
-## See Also
+## همچنین ببینید
 
-- [FetchNode source](../scrapegraphai/nodes/fetch_node.py)
-- [Graph examples](#graph-examples)
-- [Timeout handling best practices](#best-practices)
+- [کد منبع FetchNode](../scrapegraphai/nodes/fetch_node.py)
+- [مثال‌های گراف](#مثال‌های-گراف)
+- [بهترین شیوه‌های مدیریت timeout](#بهترین-شیوه‌ها)

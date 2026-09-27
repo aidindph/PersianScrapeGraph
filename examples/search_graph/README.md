@@ -1,21 +1,21 @@
-# Search Graph Example
+# مثال گراف جست‌وجو (Search Graph)
 
-This example shows how to implement a search graph for web content retrieval and analysis using Scrapegraph-ai.
+این مثال نشان می‌دهد چگونه می‌توان با Scrapegraph-ai یک گراف جست‌وجو برای بازیابی و تحلیل محتوای وب پیاده‌سازی کرد.
 
-## Features
+## قابلیت‌ها
 
-- Web search integration
-- Content relevance scoring
-- Result filtering
-- Data aggregation
+- یکپارچه‌سازی با جست‌وجوی وب
+- امتیازدهی به ارتباط محتوا
+- پالایش نتایج
+- تجمیع داده
 
-## Setup
+## راه‌اندازی
 
-1. Install required dependencies
-2. Copy `.env.example` to `.env`
-3. Configure your API keys in the `.env` file
+1. وابستگی‌های مورد نیاز را نصب کنید
+2. فایل `.env.example` را به `.env` کپی کنید
+3. کلیدهای API خود را در فایل `.env` پیکربندی کنید
 
-## Usage
+## نحوهٔ استفاده
 
 ```python
 from scrapegraphai.graphs import SearchGraph
@@ -24,8 +24,8 @@ graph = SearchGraph()
 results = graph.search("your search query")
 ```
 
-## Environment Variables
+## متغیرهای محیطی
 
-Required environment variables:
-- `OPENAI_API_KEY`: Your OpenAI API key
-- `SERP_API_KEY`: Your SERP API key (optional)
+متغیرهای محیطی مورد نیاز:
+- `OPENAI_API_KEY`: کلید API شرکت OpenAI شما
+- `SERP_API_KEY`: کلید API سرویس SERP شما (اختیاری)

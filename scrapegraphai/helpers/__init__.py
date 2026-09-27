@@ -1,5 +1,6 @@
 """
-This module provides helper functions and utilities for the ScrapeGraphAI application.
+این ماژول ثابت‌ها و اسکیماهای مشترک ScrapeGraphAI
+(توکن مدل‌ها، فرادادهٔ nodeها، robots و…) را فراهم می‌کند.
 """
 
 from .models_tokens import models_tokens

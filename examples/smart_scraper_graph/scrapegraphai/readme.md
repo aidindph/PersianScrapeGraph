@@ -1,68 +1,68 @@
-# Smart Scraper Examples with Scrapegraph AI
+# مثال‌های Smart Scraper با ScrapeGraph AI
 
-This repository contains examples demonstrating how to use Scrapegraph AI's powerful web scraping capabilities to transform websites into structured data using natural language prompts.
+این ریپازیتوری حاوی مثال‌هایی است که نشان می‌دهند چگونه می‌توان با استفاده از قابلیت‌های قدرتمند اسکرپینگ ScrapeGraph AI و به‌کمک پرومپت‌های زبان طبیعی، وب‌سایت‌ها را به دادهٔ ساخت‌یافته تبدیل کرد.
 
-## About Scrapegraph AI
+## دربارهٔ ScrapeGraph AI
 
-[Scrapegraph AI](https://scrapegraphai.com) is a powerful web scraping API that transforms any website into structured data for AI agents and analytics. It's built specifically for AI agents and LLMs, featuring natural language instructions and structured JSON output.
+[ScrapeGraph AI](https://scrapegraphai.com) یک API قدرتمند اسکرپینگ است که هر وب‌سایتی را به دادهٔ ساخت‌یافته برای عامل‌های هوش مصنوعی و تحلیل‌ها تبدیل می‌کند. این سرویس مخصوص عامل‌های هوش مصنوعی و LLMها ساخته شده و از دستورالعمل‌های زبان طبیعی و خروجی JSON ساخت‌یافته پشتیبانی می‌کند.
 
-Key features:
-- Universal data extraction from any website
-- Intelligent processing with advanced AI
-- Lightning-fast setup with official SDKs
-- Enterprise-ready with automatic proxy rotation
-- Seamless integration with RAG systems
+ویژگی‌های کلیدی:
+- استخراج داده از هر وب‌سایتی، به‌صورت همه‌منظوره
+- پردازش هوشمند با هوش مصنوعی پیشرفته
+- راه‌اندازی بسیار سریع با SDKهای رسمی
+- آمادهٔ استفاده در سطح سازمانی با چرخش خودکار پروکسی
+- یکپارچه‌سازی روان با سیستم‌های RAG
 
-## Examples Included
+## مثال‌های موجود
 
-### 1. Smart Scraper
-The `smartscraper_scrapegraphai.py` example demonstrates how to extract structured data from a single website using natural language prompts.
+### ۱. Smart Scraper
+مثال `smartscraper_scrapegraphai.py` نشان می‌دهد چگونه می‌توان با پرومپت‌های زبان طبیعی، دادهٔ ساخت‌یافته از یک وب‌سایت واحد استخراج کرد.
 
-### 2. Search Scraper
-The `searchscraper_scrapegraphai.py` example shows how to:
-- Search the internet for relevant information
-- Extract structured data from multiple sources
-- Merge and analyze information from different websites
-- Get comprehensive answers to complex queries
+### ۲. Search Scraper
+مثال `searchscraper_scrapegraphai.py` نشان می‌دهد چگونه:
+- در اینترنت به‌دنبال اطلاعات مرتبط جست‌وجو کنیم
+- از چند منبع دادهٔ ساخت‌یافته استخراج کنیم
+- اطلاعات وب‌سایت‌های مختلف را ادغام و تحلیل کنیم
+- به پرس‌و‌جوهای پیچیده پاسخ جامع بگیریم
 
-## Prerequisites
+## پیش‌نیازها
 
-- Python 3.7+
-- pip (Python package manager)
+- پایتون ۳.۷ به بالا
+- pip (مدیر بستهٔ پایتون)
 
-## Installation
+## نصب
 
-1. Clone the repository:
+1. ریپازیتوری را clone کنید:
 ```bash
 git clone https://github.com/yourusername/Scrapegraph-ai.git
 cd Scrapegraph-ai
 ```
 
-2. Install required dependencies:
+2. وابستگی‌های مورد نیاز را نصب کنید:
 ```bash
 pip install -r requirements.txt
 ```
 
-3. Create a `.env` file in the `examples/smart_scraper_graph` directory with:
+3. در پوشهٔ `examples/smart_scraper_graph` یک فایل `.env` با این محتوا بسازید:
 ```env
 SCRAPEGRAPH_API_KEY=your-api-key-here
 ```
 
-## Usage
+## نحوهٔ استفاده
 
-### Smart Scraper Example
+### مثال Smart Scraper
 ```bash
 python smartscraper_scrapegraphai.py
 ```
 
-### Search Scraper Example
+### مثال Search Scraper
 ```bash
 python searchscraper_scrapegraphai.py
 ```
 
-## Example Outputs
+## نمونه خروجی‌ها
 
-### Smart Scraper Output
+### خروجی Smart Scraper
 ```python
 Request ID: abc123...
 Result: {
@@ -82,7 +82,7 @@ Result: {
 Reference URLs: ["https://scrapegraphai.com/about"]
 ```
 
-### Search Scraper Output
+### خروجی Search Scraper
 ```python
 Request ID: xyz789...
 Number of sources processed: 3
@@ -109,40 +109,40 @@ Sources:
 3. https://scrapegraphai.com/docs
 ```
 
-## Features Demonstrated
+## قابلیت‌های نمایش‌داده‌شده
 
-- Environment variable configuration
-- API client initialization
-- Smart scraping with natural language prompts
-- Search-based scraping across multiple sources
-- Error handling and response processing
-- Secure credential management
+- پیکربندی از طریق متغیرهای محیطی
+- راه‌اندازی کلاینت API
+- اسکرپینگ هوشمند با پرومپت‌های زبان طبیعی
+- اسکرپینگ مبتنی بر جست‌وجو در چند منبع
+- مدیریت خطا و پردازش پاسخ
+- مدیریت امن اطلاعات حساس
 
-## Pricing and Credits
+## قیمت‌گذاری و اعتبار
 
-Scrapegraph AI offers various pricing tiers:
-- Free: 50 credits included
-- Starter: $20/month, 5,000 credits
-- Growth: $100/month, 40,000 credits
-- Pro: $500/month, 250,000 credits
-- Enterprise: Custom solutions
+Scrapegraph AI پلن‌های قیمتی مختلفی دارد:
+- رایگان: ۵۰ اعتبار همراه
+- Starter: ۲۰ دلار در ماه، ۵٬۰۰۰ اعتبار
+- Growth: ۱۰۰ دلار در ماه، ۴۰٬۰۰۰ اعتبار
+- Pro: ۵۰۰ دلار در ماه، ۲۵۰٬۰۰۰ اعتبار
+- سازمانی (Enterprise): راه‌حل‌های سفارشی
 
-Service costs:
-- Smart Scraper: 10 credits per webpage
-- Search Scraper: 30 credits per query
+هزینهٔ سرویس‌ها:
+- Smart Scraper: ۱۰ اعتبار به‌ازای هر صفحهٔ وب
+- Search Scraper: ۳۰ اعتبار به‌ازای هر پرس‌وجو
 
-## Support and Resources
+## پشتیبانی و منابع
 
-- [Official Documentation](https://scrapegraphai.com/docs)
-- [API Status](https://scrapegraphai.com/status)
-- Contact: contact@scrapegraphai.com
+- [مستندات رسمی](https://scrapegraphai.com/docs)
+- [وضعیت API](https://scrapegraphai.com/status)
+- تماس: contact@scrapegraphai.com
 
-## Security Notes
+## نکات امنیتی
 
-- Never commit your `.env` file to version control
-- Keep your API key secure
-- Use environment variables for sensitive credentials
+- هرگز فایل `.env` خود را در سیستم کنترل نسخه کامیت نکنید
+- کلید API خود را امن نگه دارید
+- برای اطلاعات حساس از متغیرهای محیطی استفاده کنید
 
-## License
+## مجوز
 
-This example is provided under the same license as Scrapegraph AI. See the [Terms of Service](https://scrapegraphai.com/terms) for more information.
+این مثال با همان مجوز ScrapeGraph AI ارائه شده است. برای اطلاعات بیشتر [شرایط استفاده از سرویس](https://scrapegraphai.com/terms) را ببینید.

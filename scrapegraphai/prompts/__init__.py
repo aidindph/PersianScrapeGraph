@@ -1,5 +1,6 @@
 """
-__init__.py for the prompts folder
+این ماژول قالب‌های پرومپت (TEMPLATE_*) استفاده‌شده در nodeهای ScrapeGraphAI
+را جمع‌آوری و صادر می‌کند.
 """
 
 from .generate_answer_node_csv_prompts import (

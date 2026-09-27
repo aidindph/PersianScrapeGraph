@@ -1,21 +1,21 @@
-# Depth Search Graph Example
+# مثال گراف جست‌وجوی عمیق (Depth Search Graph)
 
-This example demonstrates how to use Scrapegraph-ai for deep web crawling and content exploration.
+این مثال نشان می‌دهد چگونه می‌توان از Scrapegraph-ai برای پیمایش عمیق وب و کاوش محتوا استفاده کرد.
 
-## Features
+## قابلیت‌ها
 
-- Deep web crawling
-- Content discovery
-- Link analysis
-- Recursive search
+- پیمایش عمیق وب
+- کشف محتوا
+- تحلیل لینک‌ها
+- جست‌وجوی بازگشتی
 
-## Setup
+## راه‌اندازی
 
-1. Install required dependencies
-2. Copy `.env.example` to `.env`
-3. Configure your API keys in the `.env` file
+1. وابستگی‌های مورد نیاز را نصب کنید
+2. فایل `.env.example` را به `.env` کپی کنید
+3. کلیدهای API خود را در فایل `.env` پیکربندی کنید
 
-## Usage
+## نحوهٔ استفاده
 
 ```python
 from scrapegraphai.graphs import DepthSearchGraph
@@ -24,7 +24,7 @@ graph = DepthSearchGraph()
 results = graph.search("https://example.com", depth=3)
 ```
 
-## Environment Variables
+## متغیرهای محیطی
 
-Required environment variables:
-- `OPENAI_API_KEY`: Your OpenAI API key
+متغیرهای محیطی مورد نیاز:
+- `OPENAI_API_KEY`: کلید API شرکت OpenAI شما

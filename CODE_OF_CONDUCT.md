@@ -1,128 +1,108 @@
-# Contributor Covenant Code of Conduct
+# منشور اخلاقی مشارکت‌کنندگان (Contributor Covenant Code of Conduct)
 
-## Our Pledge
+## پیمان ما
 
-We as members, contributors, and leaders pledge to make participation in our
-community a harassment-free experience for everyone, regardless of age, body
-size, visible or invisible disability, ethnicity, sex characteristics, gender
-identity and expression, level of experience, education, socio-economic status,
-nationality, personal appearance, race, religion, or sexual identity
-and orientation.
+ما، به‌عنوان اعضا، مشارکت‌کنندگان و رهبران، پیمان می‌بندیم که مشارکت در
+جامعهٔ ما برای همه، فارغ از سن، اندازهٔ بدن، توانمندیِ آشکار یا نامرئی، قومیت،
+ویژگی‌های جنسی، هویت و بیان جنسیتی، سطح تجربه، تحصیلات، وضعیت اجتماعی-اقتصادی،
+ملیت، ظاهر شخصی، نژاد، مذهب یا هویت و جهت‌گیری جنسی، تجربه‌ای بدون آزار باشد.
 
-We pledge to act and interact in ways that contribute to an open, welcoming,
-diverse, inclusive, and healthy community.
+ما پیمان می‌بندیم که به شیوه‌هایی عمل و تعامل کنیم که به جامعه‌ای باز، خوش‌آمدگو،
+متنوع، فراگیر و سالم کمک می‌کند.
 
-## Our Standards
+## معیارهای ما
 
-Examples of behavior that contributes to a positive environment for our
-community include:
+نمونه‌هایی از رفتارهایی که به محیطی مثبت برای جامعهٔ ما کمک می‌کنند:
 
-* Demonstrating empathy and kindness toward other people
-* Being respectful of differing opinions, viewpoints, and experiences
-* Giving and gracefully accepting constructive feedback
-* Accepting responsibility and apologizing to those affected by our mistakes,
-  and learning from the experience
-* Focusing on what is best not just for us as individuals, but for the
-  overall community
+* نشان‌دادن همدلی و مهربانی نسبت به دیگران
+* احترام‌گذاشتن به نظرات، دیدگاه‌ها و تجربه‌های متفاوت
+* دادن بازخورد سازنده و پذیرفتن آن با بزرگواری
+* پذیرفتن مسئولیت و عذرخواهی از کسانی که رفتارمان بر آن‌ها اثر گذاشته است،
+  و آموختن از آن تجربه
+* تمرکز بر آنچه نه‌فقط برای ما به‌عنوان افراد، بلکه برای کل جامعه بهتر است
 
-Examples of unacceptable behavior include:
+نمونه‌هایی از رفتارهای غیرقابل‌قبول:
 
-* The use of sexualized language or imagery, and sexual attention or
-  advances of any kind
-* Trolling, insulting or derogatory comments, and personal or political attacks
-* Public or private harassment
-* Publishing others' private information, such as a physical or email
-  address, without their explicit permission
-* Other conduct which could reasonably be considered inappropriate in a
-  professional setting
+* استفاده از زبان یا تصاویر جنسی‌سازی‌شده و هر نوع توجه یا پیش‌رفت جنسی
+* ترول‌سازی (trolling)، توهین یا تحقیر، و حملات شخصی یا سیاسی
+* آزارِ عمومی یا خصوصی
+* انتشار اطلاعات خصوصی دیگران — مانند نشانی فیزیکی یا ایمیل — بدون اجازهٔ صریح آن‌ها
+* هر رفتار دیگری که در یک محیط حرفه‌ای می‌تواند به‌طور معقولی نامناسب تلقی شود
 
-## Enforcement Responsibilities
+## مسئولیت‌های اجرا
 
-Community leaders are responsible for clarifying and enforcing our standards of
-acceptable behavior and will take appropriate and fair corrective action in
-response to any behavior that they deem inappropriate, threatening, offensive,
-or harmful.
+رهبران جامعه مسئول روشن‌کردن و اجرای معیارهای رفتار قابل‌قبول ما هستند و در
+پاسخ به هر رفتاری که نامناسب، تهدیدآمیز، توهین‌آمیز یا مضر بدانند، اقدامی
+مناسب و منصفانه انجام می‌دهند.
 
-Community leaders have the right and responsibility to remove, edit, or reject
-comments, commits, code, wiki edits, issues, and other contributions that are
-not aligned to this Code of Conduct, and will communicate reasons for moderation
-decisions when appropriate.
+رهبران جامعه حق و مسئولیت دارند کامنت‌ها، کامیت‌ها، کدها، ویرایش‌های ویکی،
+issueها و سایر مشارکت‌هایی که با این منشور اخلاقی ناسازگارند را حذف، ویرایش یا
+رد کنند و در صورت لزوم دلایل تصمیم‌های نظارتی خود را اعلام کنند.
 
-## Scope
+## دامنهٔ اجرا
 
-This Code of Conduct applies within all community spaces, and also applies when
-an individual is officially representing the community in public spaces.
-Examples of representing our community include using an official e-mail address,
-posting via an official social media account, or acting as an appointed
-representative at an online or offline event.
+این منشور اخلاقی در تمام فضاهای جامعهٔ ما اعمال می‌شود و همچنین زمانی که
+فردی به‌طور رسمی در فضاهای عمومی نمایندهٔ جامعه باشد. نمونه‌هایی از نمایندگی
+جامعهٔ ما عبارت‌اند از: استفاده از نشانی ایمیل رسمی، ارسال پست از طریق حساب
+شبکهٔ اجتماعی رسمی یا ایفای نقش نمایندهٔ تعیین‌شده در یک رویداد آنلاین یا حضوری.
 
-## Enforcement
+## اجرا
 
-Instances of abusive, harassing, or otherwise unacceptable behavior may be
-reported to the community leaders responsible for enforcement at
-mvincig11@gmail.com.
-All complaints will be reviewed and investigated promptly and fairly.
+موارد رفتار سوءاستفاده‌گرانه، آزاردهنده یا به هر شکل غیرقابل‌قبول را می‌توان
+از طریق ایمیل mvincig11@gmail.com به رهبران جامعهٔ مسئولِ اجرا گزارش کرد.
+تمامی شکایات به‌سرعت و به‌طور منصفانه بررسی و رسیدگی می‌شوند.
 
-All community leaders are obligated to respect the privacy and security of the
-reporter of any incident.
+همهٔ رهبران جامعه موظف‌اند حریم خصوصی و امنیت گزارش‌دهندهٔ هر اتفاق را محترم بشمارند.
 
-## Enforcement Guidelines
+## دستورالعمل‌های اجرا
 
-Community leaders will follow these Community Impact Guidelines in determining
-the consequences for any action they deem in violation of this Code of Conduct:
+رهبران جامعه در تعیین پیامدهای هر اقدامی که تخلف از این منشور اخلاقی بدانند،
+این دستورالعمل‌های «اثر بر جامعه» (Community Impact Guidelines) را دنبال می‌کنند:
 
-### 1. Correction
+### ۱. تذکر (Correction)
 
-**Community Impact**: Use of inappropriate language or other behavior deemed
-unprofessional or unwelcome in the community.
+**اثر بر جامعه**: استفاده از زبان نامناسب یا رفتار دیگری که در جامعه
+غیرحرفه‌ای یا ناخوشایند تلقی شود.
 
-**Consequence**: A private, written warning from community leaders, providing
-clarity around the nature of the violation and an explanation of why the
-behavior was inappropriate. A public apology may be requested.
+**پیامد**: هشدار کتبی و خصوصی از سوی رهبران جامعه، همراه با روشن‌کردن ماهیت
+تخلف و توضیح اینکه چرا آن رفتار نامناسب بوده است. ممکن است عذرخواهی عمومی درخواست شود.
 
-### 2. Warning
+### ۲. اخطار (Warning)
 
-**Community Impact**: A violation through a single incident or series
-of actions.
+**اثر بر جامعه**: تخلف از طریق یک اتفاق منفرد یا مجموعه‌ای از اقدامات.
 
-**Consequence**: A warning with consequences for continued behavior. No
-interaction with the people involved, including unsolicited interaction with
-those enforcing the Code of Conduct, for a specified period of time. This
-includes avoiding interactions in community spaces as well as external channels
-like social media. Violating these terms may lead to a temporary or
-permanent ban.
+**پیامد**: اخطاری همراه با پیامدهای ادامهٔ رفتار. به‌مدت معینی هیچ تعاملی با
+افراد درگیر وجود نخواهد داشت؛ از جمله تعاملِ درخواست‌نشده با کسانی که منشور را
+اجرا می‌کنند. این شامل پرهیز از تعامل در فضاهای جامعه و نیز کانال‌های بیرونی مانند
+شبکه‌های اجتماعی است. نقض این شرایط می‌تواند به محرومیت موقت یا دائمی بینجامد.
 
-### 3. Temporary Ban
+### ۳. محرومیت موقت (Temporary Ban)
 
-**Community Impact**: A serious violation of community standards, including
-sustained inappropriate behavior.
+**اثر بر جامعه**: تخلف جدی از معیارهای جامعه، از جمله ادامهٔ رفتار نامناسب.
 
-**Consequence**: A temporary ban from any sort of interaction or public
-communication with the community for a specified period of time. No public or
-private interaction with the people involved, including unsolicited interaction
-with those enforcing the Code of Conduct, is allowed during this period.
-Violating these terms may lead to a permanent ban.
+**پیامد**: محرومیت موقت از هر نوع تعامل یا ارتباط عمومی با جامعه به‌مدت معین.
+در این مدت هیچ تعامل عمومی یا خصوصی با افراد درگیر مجاز نیست؛ از جمله تعاملِ
+درخواست‌نشده با کسانی که منشور را اجرا می‌کنند. نقض این شرایط می‌تواند به
+محرومیت دائمی بینجامد.
 
-### 4. Permanent Ban
+### ۴. محرومیت دائمی (Permanent Ban)
 
-**Community Impact**: Demonstrating a pattern of violation of community
-standards, including sustained inappropriate behavior,  harassment of an
-individual, or aggression toward or disparagement of classes of individuals.
+**اثر بر جامعه**: نشان‌دادن الگوی تکرارشوندهٔ تخلف از معیارهای جامعه؛ از جمله
+رفتار نامناسبِ مستمر، آزار یک فرد، یا تجاوز یا بدگویی نسبت به گروه‌هایی از افراد.
 
-**Consequence**: A permanent ban from any sort of public interaction within
-the community.
+**پیامد**: محرومیت دائمی از هر نوع تعامل عمومی درون جامعه.
 
-## Attribution
+## انتساب
 
-This Code of Conduct is adapted from the [Contributor Covenant][homepage],
-version 2.0, available at
-https://www.contributor-covenant.org/version/2/0/code_of_conduct.html.
+این منشور اخلاقی برگرفته از [Contributor Covenant][homepage]،
+نسخهٔ ۲.۰ و در دسترس در
+https://www.contributor-covenant.org/version/2/0/code_of_conduct.html است.
 
-Community Impact Guidelines were inspired by [Mozilla's code of conduct
-enforcement ladder](https://github.com/mozilla/diversity).
+دستورالعمل‌های «اثر بر جامعه» از [نردبان اجرای منشور اخلاقی موزیلا](https://github.com/mozilla/diversity)
+الهام گرفته شده است.
 
 [homepage]: https://www.contributor-covenant.org
 
-For answers to common questions about this code of conduct, see the FAQ at
-https://www.contributor-covenant.org/faq. Translations are available at
-https://www.contributor-covenant.org/translations.
+برای پاسخ پرسش‌های رایج دربارهٔ این منشور اخلاقی، پرسش‌های متداول را در
+https://www.contributor-covenant.org/faq ببینید. ترجمه‌ها در
+https://www.contributor-covenant.org/translations در دسترس هستند.

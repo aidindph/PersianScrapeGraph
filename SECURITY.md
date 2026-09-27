@@ -1,5 +1,5 @@
-# Security Policy
+# سیاست امنیتی
 
-## Reporting a Vulnerability
+## گزارش آسیب‌پذیری
 
-For reporting a vulnerability contact directly mvincig11@gmail.com
+برای گزارش یک آسیب‌پذیری، مستقیماً با آدرس mvincig11@gmail.com در تماس باشید.

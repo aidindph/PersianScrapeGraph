@@ -1,5 +1,6 @@
 """
-__init__.py file for node folder module
+این ماژول nodeهای گراف (گام‌های مجزای هر پایپ‌لاین مانند FetchNode و GenerateAnswerNode)
+را برای ScrapeGraphAI تعریف و صادر می‌کند.
 """
 
 from .base_node import BaseNode

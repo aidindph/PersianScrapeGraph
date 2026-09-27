@@ -1,5 +1,6 @@
 """
-__init__.py file for scrapegraphai folder
+این بسته، کتابخانهٔ ScrapeGraphAI است: اسکرپینگِ وب مبتنی بر LLM و منطق گراف.
+برای نمونه‌های کاربردی پوشهٔ examples/ را ببینید.
 """
 
 from .utils.logging import get_logger, set_verbosity_info
