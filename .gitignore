@@ -195,3 +195,10 @@ dev.ipynb
 
 # CodeBeaver reports and artifacts
 .codebeaver
+
+# ─── PersianScrapeGraph ─────────────────────────────────────────────────────
+# الگوهای عمومی بالا (main.py و lib/) نباید فایل‌های بخش‌های جدید را حذف کنند.
+# نکته: .env و __pycache__ همچنان نادیده گرفته می‌شوند (اسرار هرگز کامیت نمی‌شوند).
+!api-service/main.py
+!webui/src/lib/
+!webui/src/lib/**
