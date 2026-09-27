@@ -1,0 +1,50 @@
+# ============================================================================
+#  PersianScrapeGraph — Commit Author Policy (repo rule)
+#
+#  🔒 RULE: All commits pushed to this repository MUST be authored by:
+#           Aidin Ghassemi <aidindph@users.noreply.github.com>
+#
+#  This workflow enforces the rule on the GitHub side for every push
+#  and every pull request. Local enforcement: scripts/check-commit-author.sh
+#  via .pre-commit-config.yaml (run `uv run pre-commit install`).
+# ============================================================================
+name: Commit Author Policy
+
+on:
+  push:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  check-commit-author:
+    name: "Commits must be authored by Aidin Ghassemi"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout (full history)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Verify commit authors
+        run: |
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            git fetch origin "${{ github.base_ref }}"
+            RANGE="origin/${{ github.base_ref }}..HEAD"
+          else
+            BEFORE="${{ github.event.before }}"
+            if [ -z "$BEFORE" ] \
+               || [ "$BEFORE" = "0000000000000000000000000000000000000000" ] \
+               || ! git cat-file -e "$BEFORE" 2>/dev/null; then
+              RANGE="-1"
+            else
+              RANGE="${BEFORE}..${{ github.sha }}"
+            fi
+          fi
+
+          echo "Checking commit range: $RANGE"
+          bash scripts/check-commit-author.sh --range "$RANGE"
+
+          echo "✅ Commit Author Policy passed — Aidin Ghassemi"

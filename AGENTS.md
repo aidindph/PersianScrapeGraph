@@ -6,6 +6,28 @@ working on **ScrapeGraphAI**. Human contributors should read
 
 ---
 
+## ⚠️ 0. PersianScrapeGraph fork rule (mandatory — enforced by CI)
+
+This repository is the **PersianScrapeGraph** fork
+(origin: `github.com/aidindph/PersianScrapeGraph`,
+upstream: `github.com/ScrapeGraphAI/Scrapegraph-ai`).
+
+> **All commits and pushes MUST be authored by
+> `Aidin Ghassemi <aidindph@users.noreply.github.com>`.**
+
+The pre-commit hook (`scripts/check-commit-author.sh`) and the
+`Commit Author Policy` CI workflow (`.github/workflows/commit-author-check.yml`)
+automatically **reject anything else**. Configure once, right after cloning:
+
+```bash
+git config user.name  "Aidin Ghassemi"
+git config user.email "aidindph@users.noreply.github.com"
+```
+
+Full details: [CONTRIBUTING.md](CONTRIBUTING.md).
+
+---
+
 ## 1. Golden rule: everything goes to `pre/beta`
 
 **`main` is never written to directly. All work is based on and merged into `pre/beta`.**

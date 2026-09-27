@@ -1,3 +1,9 @@
+> [!IMPORTANT]
+> **🇮🇷 PersianScrapeGraph** — این ریپو یک کلون توسعه‌یافته از [ScrapeGraphAI](https://github.com/ScrapeGraphAI/Scrapegraph-ai) است (مجوز MIT و حقوق نویسندگان اصلی محفوظ است).
+> 📌 **قانون ریپو:** تمام کامیت‌ها و پوش‌ها باید به نام **Aidin Ghassemi** باشند — جزئیات و اجرای خودکار در [CONTRIBUTING.md](CONTRIBUTING.md).
+
+---
+
 ## 🚀 **Looking for an even faster and simpler way to scrape at scale (only 5 lines of code)?** Check out our enhanced version at [**ScrapeGraphAI.com**](https://scrapegraphai.com/?utm_source=github&utm_medium=readme&utm_campaign=oss_cta&ut#m_content=top_banner)! 🚀
 
 ---

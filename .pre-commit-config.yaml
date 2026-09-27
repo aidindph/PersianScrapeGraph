@@ -1,4 +1,17 @@
 repos:
+  # ── PersianScrapeGraph repo rule ─────────────────────────────────────
+  # All commits must be authored by "Aidin Ghassemi"
+  # <aidindph@users.noreply.github.com> (see CONTRIBUTING.md)
+  - repo: local
+    hooks:
+      - id: commit-author-policy
+        name: commit-author-policy (Aidin Ghassemi only)
+        entry: bash scripts/check-commit-author.sh
+        language: system
+        always_run: true
+        pass_filenames: false
+        stages: [pre-commit, pre-push]
+
   - repo: https://github.com/psf/black
     rev: 24.8.0
     hooks:
