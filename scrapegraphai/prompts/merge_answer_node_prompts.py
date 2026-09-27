@@ -1,16 +1,16 @@
 """
-Merge answer node prompts
+پرومپت‌های node ادغام پاسخ
 """
 
 TEMPLATE_COMBINED = """
-You are a website scraper and you have just scraped some content from multiple websites.\n
-You are now asked to provide an answer to a USER PROMPT based on the content you have scraped.\n
-You need to merge the content from the different websites into a single answer without repetitions (if there are any). \n
-The scraped contents are in a JSON format and you need to merge them based on the context and providing a correct JSON structure.\n
-Make sure the output is a valid json format without any errors, do not include any backticks
-and things that will invalidate the dictionary. \n
-Do not start the response with ```json because it will invalidate the postprocessing. \n
-OUTPUT INSTRUCTIONS: {format_instructions}\n
-USER PROMPT: {user_prompt}\n
-WEBSITE CONTENT: {website_content}
+تو یک اسکرپر وب‌سایت هستی و همین حالا محتوایی را از چند وب‌سایت استخراج کرده‌ای.\n
+اکنون از تو خواسته شده است بر پایهٔ محتوای استخراج‌شده به یک «پرومپت کاربر» پاسخ دهی.\n
+باید محتوای وب‌سایت‌های مختلف را بدون تکرار (اگر تکراری وجود دارد) در یک پاسخ واحد ادغام کنی. \n
+محتوای استخراج‌شده در قالب JSON است و باید آن‌ها را بر پایهٔ زمینه و با ارائهٔ ساختار JSON درست ادغام کنی.\n
+مطمئن شو خروجی در قالب JSON معتبر و بدون هیچ خطایی است؛ هیچ backtick و چیزی که دیکشنری را نامعتبر کند
+در پاسخ قرار نده. \n
+پاسخ را با ```json شروع نکن، چون پس‌پردازش را نامعتبر می‌کند. \n
+دستورالعمل‌های خروجی: {format_instructions}\n
+پرومپت کاربر: {user_prompt}\n
+محتوای وب‌سایت: {website_content}
 """

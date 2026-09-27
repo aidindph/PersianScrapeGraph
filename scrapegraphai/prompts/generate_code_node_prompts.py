@@ -1,212 +1,211 @@
 """
-Generate code prompts helper
+پرومپت‌های کمکی تولید کد
 """
 
 TEMPLATE_INIT_CODE_GENERATION = """
-**Task**: Create a Python function named `extract_data(html: str) -> dict()` using BeautifulSoup that extracts relevant information from the given HTML code string and returns it in a dictionary matching the Desired JSON Output Schema.
+**وظیفه**: تابعی در Python با نام `extract_data(html: str) -> dict()` و با استفاده از BeautifulSoup بساز که اطلاعات مرتبط را از رشتهٔ کد HTML داده‌شده استخراج کند و آن را در قالب یک دیکشنری مطابق با اسکیمای JSON خروجی مطلوب برگرداند.
 
-**User's Request**:
+**درخواست کاربر**:
 {user_input}
 
-**Desired JSON Output Schema**:
+**اسکیمای JSON خروجی مطلوب**:
 ```json
 {json_schema}
 ```
 
-**Initial Task Analysis**:
+**تحلیل اولیهٔ وظیفه**:
 {initial_analysis}
 
-**HTML Code**:
+**کد HTML**:
 ```html
 {html_code}
 ```
 
-**HTML Structure Analysis**:
+**تحلیل ساختار HTML**:
 {html_analysis}
 
-Based on the above analyses, generate the `extract_data(html: str) -> dict()` function that:
-1. Efficiently extracts the required data from the given HTML structure.
-2. Processes and structures the data according to the specified JSON schema.
-3. Returns the structured data as a dictionary.
+بر پایهٔ تحلیل‌های بالا، تابع `extract_data(html: str) -> dict()` را تولید کن که:
+1. داده‌های لازم را از ساختار HTML داده‌شده به‌شکلی کارآمد استخراج کند.
+2. داده‌ها را مطابق با اسکیمای JSON مشخص‌شده پردازش و ساختاردهی کند.
+3. داده‌های ساختاریافته را به‌صورت یک دیکشنری برگرداند.
 
-Your code should be well-commented, explaining the reasoning behind key decisions and any potential areas for improvement or customization.
+کدت باید خوب کامنت‌گذاری‌شده باشد و دلیل تصمیم‌های کلیدی و هر حوزهٔ احتمالی برای بهبود یا سفارشی‌سازی را توضیح دهد.
 
-Use only the following pre-imported libraries:
-- BeautifulSoup from bs4
+فقط از کتابخانه‌های از پیش import شدهٔ زیر استفاده کن:
+- BeautifulSoup از bs4
 - re
 
-**Output ONLY the Python code of the extract_data function, WITHOUT ANY IMPORTS OR ADDITIONAL TEXT.**
-In your code do not include backticks.
+**فقط و فقط کد Python تابع extract_data را خروجی بده، بدون هیچ import یا متن اضافی.**
+در کدت هیچ backtick قرار نده.
 
-**Response**:
+**پاسخ**:
 """
 
 TEMPLATE_SYNTAX_ANALYSIS = """
-The current code has encountered a syntax error. Here are the details:
+کد فعلی با یک خطای نحوی مواجه شده است. جزئیات به این صورت است:
 
-Current Code:
+کد فعلی:
 ```python
 {generated_code}
 ```
 
-Syntax Error:
+خطای نحوی:
 {errors}
 
-Please analyze in detail the syntax error and suggest a fix. Focus only on correcting the syntax issue while ensuring the code still meets the original requirements.
+لطفاً خطای نحوی را با جزئیات تحلیل کن و راه‌حلی برای رفع آن پیشنهاد بده. فقط بر اصلاح مشکل نحوی تمرکز کن و مطمئن شو کد همچنان الزامات اولیه را برآورده می‌کند.
 
-Provide your analysis and suggestions for fixing the error. DO NOT generate any code in your response.
+تحلیل و پیشنهادهایت برای رفع خطا را ارائه کن. در پاسخت هیچ کدی تولید نکن.
 """
 
 TEMPLATE_SYNTAX_CODE_GENERATION = """
-Based on the following analysis of a syntax error, please generate the corrected code, following the suggested fix.:
+بر پایهٔ تحلیل زیر از یک خطای نحوی، لطفاً کد اصلاح‌شده را مطابق راه‌حل پیشنهادی تولید کن:
 
-Error Analysis:
+تحلیل خطا:
 {analysis}
 
-Original Code:
+کد اصلی:
 ```python
 {generated_code}
 ```
 
-Generate the corrected code, applying the suggestions from the analysis. Output ONLY the corrected Python code, WITHOUT ANY ADDITIONAL TEXT.
+کد اصلاح‌شده را با اعمال پیشنهادهای تحلیل تولید کن. فقط و فقط کد Python اصلاح‌شده را خروجی بده، بدون هیچ متن اضافی.
 """
 
 TEMPLATE_EXECUTION_ANALYSIS = """
-The current code has encountered an execution error. Here are the details:
+کد فعلی با یک خطای اجرا مواجه شده است. جزئیات به این صورت است:
 
-**Current Code**:
+**کد فعلی**:
 ```python
 {generated_code}
 ```
 
-**Execution Error**:
+**خطای اجرا**:
 {errors}
 
-**HTML Code**:
+**کد HTML**:
 ```html
 {html_code}
 ```
 
-**HTML Structure Analysis**:
+**تحلیل ساختار HTML**:
 {html_analysis}
 
-Please analyze the execution error and suggest a fix. Focus only on correcting the execution issue while ensuring the code still meets the original requirements and maintains correct syntax.
-The suggested fix should address the execution error and ensure the function can successfully extract the required data from the provided HTML structure. Be sure to be precise and specific in your analysis.
-
-Provide your analysis and suggestions for fixing the error. DO NOT generate any code in your response.
+لطفاً خطای اجرا را تحلیل کن و راه‌حلی برای رفع آن پیشنهاد بده. فقط بر اصلاح مشکل اجرا تمرکز کن و مطمئن شو کد همچنان الزامات اولیه را برآورده می‌کند و نحو صحیحی دارد.
+راه‌حل پیشنهادی باید خطای اجرا را برطرف کند و اطمینان دهد که تابع می‌تواند داده‌های لازم را از ساختار HTML ارائه‌شده با موفقیت استخراج کند. در تحلیلت دقیق و مشخص باش.
+تحلیل و پیشنهادهایت برای رفع خطا را ارائه کن. در پاسخت هیچ کدی تولید نکن.
 """
 
 TEMPLATE_EXECUTION_CODE_GENERATION = """
-Based on the following analysis of an execution error, please generate the corrected code:
+بر پایهٔ تحلیل زیر از یک خطای اجرا، لطفاً کد اصلاح‌شده را تولید کن:
 
-Error Analysis:
+تحلیل خطا:
 {analysis}
 
-Original Code:
+کد اصلی:
 ```python
 {generated_code}
 ```
 
-Generate the corrected code, applying the suggestions from the analysis. Output ONLY the corrected Python code, WITHOUT ANY ADDITIONAL TEXT.
+کد اصلاح‌شده را با اعمال پیشنهادهای تحلیل تولید کن. فقط و فقط کد Python اصلاح‌شده را خروجی بده، بدون هیچ متن اضافی.
 """
 
 TEMPLATE_VALIDATION_ANALYSIS = """
-The current code's output does not match the required schema. Here are the details:
+خروجی کد فعلی با اسکیمای لازم مطابقت ندارد. جزئیات به این صورت است:
 
-Current Code:
+کد فعلی:
 ```python
 {generated_code}
 ```
 
-Validation Errors:
+خطاهای اعتبارسنجی:
 {errors}
 
-Required Schema:
+اسکیمای لازم:
 ```json
 {json_schema}
 ```
 
-Current Output:
+خروجی فعلی:
 {execution_result}
 
-Please analyze the validation errors and suggest fixes. Focus only on correcting the output to match the required schema while ensuring the code maintains correct syntax and execution.
+لطفاً خطاهای اعتبارسنجی را تحلیل کن و راه‌حل‌هایی برای رفع آن‌ها پیشنهاد بده. فقط بر اصلاح خروجی برای انطباق با اسکیمای لازم تمرکز کن و مطمئن شو کد نحو صحیح و اجرای درستی دارد.
 
-Provide your analysis and suggestions for fixing the error. DO NOT generate any code in your response.
+تحلیل و پیشنهادهایت برای رفع خطا را ارائه کن. در پاسخت هیچ کدی تولید نکن.
 """
 
 TEMPLATE_VALIDATION_CODE_GENERATION = """
-Based on the following analysis of a validation error, please generate the corrected code:
+بر پایهٔ تحلیل زیر از یک خطای اعتبارسنجی، لطفاً کد اصلاح‌شده را تولید کن:
 
-Error Analysis:
+تحلیل خطا:
 {analysis}
 
-Original Code:
+کد اصلی:
 ```python
 {generated_code}
 ```
 
-Required Schema:
+اسکیمای لازم:
 ```json
 {json_schema}
 ```
 
-Generate the corrected code, applying the suggestions from the analysis and ensuring the output matches the required schema. Output ONLY the corrected Python code, WITHOUT ANY ADDITIONAL TEXT.
+کد اصلاح‌شده را با اعمال پیشنهادهای تحلیل و با اطمینان از انطباق خروجی با اسکیمای لازم تولید کن. فقط و فقط کد Python اصلاح‌شده را خروجی بده، بدون هیچ متن اضافی.
 """
 
 TEMPLATE_SEMANTIC_COMPARISON = """
-Compare the Generated Result with the Reference Result and determine if they are semantically equivalent:
+نتیجهٔ تولیدشده را با نتیجهٔ مرجع مقایسه کن و مشخص کن که آیا از نظر معنایی هم‌ارز هستند یا نه:
 
-Generated Result:
+نتیجهٔ تولیدشده:
 {generated_result}
 
-Reference Result (Correct Output):
+نتیجهٔ مرجع (خروجی صحیح):
 {reference_result}
 
-Analyze the content, structure, and meaning of both results. They should be considered semantically equivalent if they convey the same information, even if the exact wording or structure differs.
-If they are not semantically equivalent, identify what are the key differences in the Generated Result. The Reference Result should be considered the correct output, you need to pinpoint the problems in the Generated Result.
+محتوا، ساختار و معنای هر دو نتیجه را تحلیل کن. اگر اطلاعات یکسانی را منتقل کنند، باید آن‌ها را هم‌ارز از نظر معنایی در نظر بگیری؛ حتی اگر عبارت یا ساختار دقیق متفاوتی داشته باشند.
+اگر از نظر معنایی هم‌ارز نیستند، تفاوت‌های کلیدیِ نتیجهٔ تولیدشده را مشخص کن. نتیجهٔ مرجع را خروجی صحیح بدان و باید مشکلات نتیجهٔ تولیدشده را دقیق نشان دهی.
 
 {format_instructions}
 
-Human: Are the generated result and reference result semantically equivalent? If not, what are the key differences?
+Human: آیا نتیجهٔ تولیدشده و نتیجهٔ مرجع از نظر معنایی هم‌ارز هستند؟ اگر نیستند، تفاوت‌های کلیدی کدام‌اند؟
 
-Assistant: Let's analyze the two results carefully:
+Assistant: بیاییم هر دو نتیجه را با دقت تحلیل کنیم:
 """
 
 TEMPLATE_SEMANTIC_ANALYSIS = """
-The current code's output is semantically different from the reference answer. Here are the details:
+خروجی کد فعلی از نظر معنایی با پاسخ مرجع تفاوت دارد. جزئیات به این صورت است:
 
-Current Code:
+کد فعلی:
 ```python
 {generated_code}
 ```
 
-Semantic Differences:
+تفاوت‌های معنایی:
 {differences}
 
-Comparison Explanation:
+توضیح مقایسه:
 {explanation}
 
-Please analyze these semantic differences and suggest how to modify the code to produce a result that is semantically equivalent to the reference answer. Focus on addressing the key differences while maintaining the overall structure and functionality of the code.
+لطفاً این تفاوت‌های معنایی را تحلیل کن و پیشنهاد بده که کد چگونه تغییر کند تا نتیجه‌ای هم‌ارز از نظر معنایی با پاسخ مرجع تولید کند. فقط بر رفع تفاوت‌های کلیدی تمرکز کن و ساختار کلی و کارکرد کد را حفظ کن.
 
-Provide your analysis and suggestions for fixing the semantic differences. DO NOT generate any code in your response.
+تحلیل و پیشنهادهایت برای رفع تفاوت‌های معنایی را ارائه کن. در پاسخت هیچ کدی تولید نکن.
 """
 
 TEMPLATE_SEMANTIC_CODE_GENERATION = """
-Based on the following analysis of semantic differences, please generate the corrected code:
+بر پایهٔ تحلیل زیر از تفاوت‌های معنایی، لطفاً کد اصلاح‌شده را تولید کن:
 
-Semantic Analysis:
+تحلیل معنایی:
 {analysis}
 
-Original Code:
+کد اصلی:
 ```python
 {generated_code}
 ```
 
-Generated Result:
+نتیجهٔ تولیدشده:
 {generated_result}
 
-Reference Result:
+نتیجهٔ مرجع:
 {reference_result}
 
-Generate the corrected code, applying the suggestions from the analysis to make the output semantically equivalent to the reference result. Output ONLY the corrected Python code, WITHOUT ANY ADDITIONAL TEXT.
+کد اصلاح‌شده را با اعمال پیشنهادهای تحلیل تولید کن تا خروجی آن از نظر معنایی با نتیجهٔ مرجع هم‌ارز شود. فقط و فقط کد Python اصلاح‌شده را خروجی بده، بدون هیچ متن اضافی.
 """

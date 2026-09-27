@@ -1,63 +1,63 @@
 """
-Prompts refiner prompts helper
+پرومپت‌های کمکی node پالایش پرومپت
 """
 
 TEMPLATE_REFINER = """
-**Task**: Analyze the user's request and the provided JSON schema to clearly map the desired data extraction.\n
-Break down the user's request into key components, and then explicitly connect these components to the
-corresponding elements within the JSON schema.
+**وظیفه**: درخواست کاربر و اسکیمای JSON ارائه‌شده را تحلیل کن تا استخراج دادهٔ مطلوب را به‌روشنی ترسیم کنی.\n
+درخواست کاربر را به اجزای کلیدی تجزیه کن و سپس این اجزا را صریح به
+عناصر متناظر در اسکیمای JSON وصل کن.
 
-**User's Request**:
+**درخواست کاربر**:
 {user_input}
 
-**Desired JSON Output Schema**:
+**اسکیمای JSON خروجی مطلوب**:
 ```json
 {json_schema}
 ```
 
-**Analysis Instructions**:
-1. **Break Down User Request:**
-* Clearly identify the core entities or data types the user is asking for.\n
-* Highlight any specific attributes or relationships mentioned in the request.\n
+**دستورالعمل‌های تحلیل**:
+1. **تجزیهٔ درخواست کاربر:**
+* موجودیت‌ها یا انواع داده‌ای هسته‌ای که کاربر می‌خواهد را به‌روشنی مشخص کن.\n
+* هر ویژگی یا رابطهٔ خاصی را که در درخواست ذکر شده برجسته کن.\n
 
-2. **Map to JSON Schema**:
-* For each identified element in the user request, pinpoint its exact counterpart in the JSON schema.\n
-* Explain how the schema structure accommodates the user's needs.
-* If applicable, mention any schema elements that are not directly addressed in the user's request.\n
+2. **تطبیق با اسکیمای JSON**:
+* برای هر عنصر شناسایی‌شده در درخواست کاربر، دقیق‌ترین معادل آن را در اسکیمای JSON مشخص کن.\n
+* توضیح بده که ساختار اسکیما چگونه نیازهای کاربر را پوشش می‌دهد.\n
+* در صورت وجود، عناصری از اسکیما را که مستقیماً در درخواست کاربر اشاره نشده‌اند ذکر کن.\n
 
-This analysis will be used to guide the HTML structure examination and ultimately inform the code generation process.\n
-Please generate only the analysis and no other text.
+این تحلیل برای هدایت بررسی ساختار HTML و در نهایت اطلاع‌رسانی به فرایند تولید کد استفاده خواهد شد.\n
+لطفاً فقط همین تحلیل را تولید کن و هیچ متن دیگری ننویس.
 
-**Response**:
+**پاسخ**:
 """
 
 TEMPLATE_REFINER_WITH_CONTEXT = """
-**Task**: Analyze the user's request, the provided JSON schema, and the additional context the user provided to clearly map the desired data extraction.\n
-Break down the user's request into key components, and then explicitly connect these components to the corresponding elements within the JSON schema.\n
+**وظیفه**: درخواست کاربر، اسکیمای JSON ارائه‌شده و زمینهٔ اضافه‌ای که کاربر فراهم کرده را تحلیل کن تا استخراج دادهٔ مطلوب را به‌روشنی ترسیم کنی.\n
+درخواست کاربر را به اجزای کلیدی تجزیه کن و سپس این اجزا را صریح به عناصر متناظر در اسکیمای JSON وصل کن.
 
-**User's Request**:
+**درخواست کاربر**:
 {user_input}
 
-**Desired JSON Output Schema**:
+**اسکیمای JSON خروجی مطلوب**:
 ```json
 {json_schema}
 ```
 
-**Additional Context**:
+**زمینهٔ اضافی**:
 {additional_context}
 
-**Analysis Instructions**:
-1. **Break Down User Request:**
-* Clearly identify the core entities or data types the user is asking for.\n
-* Highlight any specific attributes or relationships mentioned in the request.\n
+**دستورالعمل‌های تحلیل**:
+1. **تجزیهٔ درخواست کاربر:**
+* موجودیت‌ها یا انواع داده‌ای هسته‌ای که کاربر می‌خواهد را به‌روشنی مشخص کن.\n
+* هر ویژگی یا رابطهٔ خاصی را که در درخواست ذکر شده برجسته کن.\n
 
-2. **Map to JSON Schema**:
-* For each identified element in the user request, pinpoint its exact counterpart in the JSON schema.\n
-* Explain how the schema structure accommodates the user's needs.\n
-* If applicable, mention any schema elements that are not directly addressed in the user's request.\n
+2. **تطبیق با اسکیمای JSON**:
+* برای هر عنصر شناسایی‌شده در درخواست کاربر، دقیق‌ترین معادل آن را در اسکیمای JSON مشخص کن.\n
+* توضیح بده که ساختار اسکیما چگونه نیازهای کاربر را پوشش می‌دهد.\n
+* در صورت وجود، عناصری از اسکیما را که مستقیماً در درخواست کاربر اشاره نشده‌اند ذکر کن.\n
 
-This analysis will be used to guide the HTML structure examination and ultimately inform the code generation process.\n
-Please generate only the analysis and no other text.
+این تحلیل برای هدایت بررسی ساختار HTML و در نهایت اطلاع‌رسانی به فرایند تولید کد استفاده خواهد شد.\n
+لطفاً فقط همین تحلیل را تولید کن و هیچ متن دیگری ننویس.
 
-**Response**:
+**پاسخ**:
 """

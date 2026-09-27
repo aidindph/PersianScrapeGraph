@@ -1,72 +1,72 @@
 """
-Reasoning prompts helper module
+ماژول پرومپت‌های کمکی استدلال
 """
 
 TEMPLATE_REASONING = """
-**Task**: Analyze the user's request and the provided JSON schema to guide an LLM in extracting information directly from a markdown file previously parsed froma a HTML file.
+**وظیفه**: درخواست کاربر و اسکیمای JSON ارائه‌شده را تحلیل کن تا یک LLM را در استخراج مستقیم اطلاعات از یک فایل markdown که پیش‌تر از یک فایل HTML تجزیه شده هدایت کنی.
 
-**User's Request**:
+**درخواست کاربر**:
 {user_input}
 
-**Target JSON Schema**:
+**اسکیمای JSON هدف**:
 ```json
 {json_schema}
 ```
 
-**Analysis Instructions**:
-1. **Interpret User Request:**
-* Identify the key information types or entities the user is seeking.
-* Note any specific attributes, relationships, or constraints mentioned.
+**دستورالعمل‌های تحلیل**:
+1. **تفسیر درخواست کاربر:**
+* انواع اطلاعات یا موجودیت‌های کلیدی‌ای که کاربر به دنبال آن‌هاست را شناسایی کن.
+* هر ویژگی، رابطه یا قید خاصِ ذکرشده را یادداشت کن.
 
-2. **Map to JSON Schema**:
-* For each identified element in the user request, locate its corresponding field in the JSON schema.
-* Explain how the schema structure represents the requested information.
-* Highlight any relevant schema elements not explicitly mentioned in the user's request.
+2. **تطبیق با اسکیمای JSON**:
+* برای هر عنصر شناسایی‌شده در درخواست کاربر، فیلد متناظر آن را در اسکیمای JSON پیدا کن.
+* توضیح بده که ساختار اسکیما چگونه اطلاعات درخواستی را بازتاب می‌دهد.
+* هر عنصر مرتبط از اسکیما را که در درخواست کاربر صریح ذکر نشده برجسته کن.
 
-3. **Data Transformation Guidance**:
-* Provide guidance on any necessary transformations to align extracted data with the JSON schema requirements.
+3. **راهنمای تبدیل داده**:
+* دربارهٔ هر تبدیل لازم برای هم‌راستا کردن داده‌های استخراج‌شده با الزامات اسکیمای JSON راهنمایی ارائه کن.
 
-This analysis will be used to instruct an LLM that has the HTML content in its context. The LLM will use this guidance to extract the information and return it directly in the specified JSON format.
+این تحلیل برای آموزش یک LLM که محتوای HTML را در زمینهٔ خود دارد استفاده خواهد شد. آن LLM از این راهنمایی برای استخراج اطلاعات و بازگرداندن مستقیم آن در قالب JSON مشخص‌شده استفاده می‌کند.
 
-**Reasoning Output**:
-[Your detailed analysis based on the above instructions]
+**خروجی استدلال**:
+[تحلیل تفصیلی تو بر پایهٔ دستورالعمل‌های بالا]
 """
 
 TEMPLATE_REASONING_WITH_CONTEXT = """
-**Task**: Analyze the user's request and the provided JSON schema to guide an LLM in extracting information directly from a markdown file previously parsed froma a HTML file.
+**وظیفه**: درخواست کاربر و اسکیمای JSON ارائه‌شده را تحلیل کن تا یک LLM را در استخراج مستقیم اطلاعات از یک فایل markdown که پیش‌تر از یک فایل HTML تجزیه شده هدایت کنی.
 
-**User's Request**:
+**درخواست کاربر**:
 {user_input}
 
-**Target JSON Schema**:
+**اسکیمای JSON هدف**:
 ```json
 {json_schema}
 ```
 
-**Additional Context**:
+**زمینهٔ اضافی**:
 {additional_context}
 
-**Analysis Instructions**:
-1. **Interpret User Request and Context:**
-* Identify the key information types or entities the user is seeking.
-* Note any specific attributes, relationships, or constraints mentioned.
-* Incorporate insights from the additional context to refine understanding of the task.
+**دستورالعمل‌های تحلیل**:
+1. **تفسیر درخواست کاربر و زمینه:**
+* انواع اطلاعات یا موجودیت‌های کلیدی‌ای که کاربر به دنبال آن‌هاست را شناسایی کن.
+* هر ویژگی، رابطه یا قید خاصِ ذکرشده را یادداشت کن.
+* از بینش‌های زمینهٔ اضافی برای دقیق‌تر کردن درک وظیفه استفاده کن.
 
-2. **Map to JSON Schema**:
-* For each identified element in the user request, locate its corresponding field in the JSON schema.
-* Explain how the schema structure represents the requested information.
-* Highlight any relevant schema elements not explicitly mentioned in the user's request.
+2. **تطبیق با اسکیمای JSON**:
+* برای هر عنصر شناسایی‌شده در درخواست کاربر، فیلد متناظر آن را در اسکیمای JSON پیدا کن.
+* توضیح بده که ساختار اسکیما چگونه اطلاعات درخواستی را بازتاب می‌دهد.
+* هر عنصر مرتبط از اسکیما را که در درخواست کاربر صریح ذکر نشده برجسته کن.
 
-3. **Extraction Strategy**:
-* Based on the additional context, suggest specific strategies for locating and extracting the required information from the HTML.
-* Highlight any potential challenges or special considerations mentioned in the context.
+3. **استراتژی استخراج**:
+* بر پایهٔ زمینهٔ اضافی، استراتژی‌های مشخص برای یافتن و استخراج اطلاعات لازم از HTML پیشنهاد کن.
+* هر چالش احتمالی یا نکتهٔ خاصِ ذکرشده در زمینه را برجسته کن.
 
-4. **Data Transformation Guidance**:
-* Provide guidance on any necessary transformations to align extracted data with the JSON schema requirements.
-* Note any special formatting, validation, or business logic considerations from the additional context.
+4. **راهنمای تبدیل داده**:
+* دربارهٔ هر تبدیل لازم برای هم‌راستا کردن داده‌های استخراج‌شده با الزامات اسکیمای JSON راهنمایی ارائه کن.
+* هر نکتهٔ قالب‌بندی، اعتبارسنجی یا منطق کسب‌وکارِ خاص را از زمینهٔ اضافی یادداشت کن.
 
-This analysis will be used to instruct an LLM that has the HTML content in its context. The LLM will use this guidance to extract the information and return it directly in the specified JSON format.
+این تحلیل برای آموزش یک LLM که محتوای HTML را در زمینهٔ خود دارد استفاده خواهد شد. آن LLM از این راهنمایی برای استخراج اطلاعات و بازگرداندن مستقیم آن در قالب JSON مشخص‌شده استفاده می‌کند.
 
-**Reasoning Output**:
-[Your detailed analysis based on the above instructions, incorporating insights from the additional context]
+**خروجی استدلال**:
+[تحلیل تفصیلی تو بر پایهٔ دستورالعمل‌های بالا، با به‌کارگیری بینش‌های زمینهٔ اضافی]
 """

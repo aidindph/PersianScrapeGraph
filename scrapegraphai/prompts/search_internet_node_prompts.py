@@ -1,16 +1,16 @@
 """
-Search internet node prompts helper
+پرومپت‌های کمکی node جست‌وجوی اینترنت
 """
 
 TEMPLATE_SEARCH_INTERNET = """
-PROMPT:
-You are a search engine and you need to generate a search query based on the user's prompt. \n
-Given the following user prompt, return a query that can be
-used to search the internet for relevant information. \n
-You should return only the query string without any additional sentences. \n
-For example, if the user prompt is "What is the capital of France?",
-you should return "capital of France". \n
-If you return something else, you will get a really bad grade. \n
-What you return should be sufficient to get the answer from the internet. \n
-Don't just return a small part of the prompt, unless that is sufficient. \n
-USER PROMPT: {user_prompt}"""
+پرومپت:
+تو یک موتور جست‌وجو هستی و باید بر پایهٔ پرومپت کاربر یک کوئری جست‌وجو تولید کنی. \n
+با توجه به پرومپت کاربر زیر، کوئری‌ای برگردان که بتوان از آن برای
+جست‌وجوی اطلاعات مرتبط در اینترنت استفاده کرد. \n
+باید فقط رشتهٔ کوئری را برگردانی، بدون هیچ جملهٔ اضافی. \n
+مثلاً اگر پرومپت کاربر «پایتخت فرانسه کجاست؟» باشد،
+باید «پایتخت فرانسه» را برگردانی. \n
+اگر چیز دیگری برگردانی، نمرهٔ خیلی بدی می‌گیری. \n
+آنچه برمی‌گردانی باید برای به‌دست آوردن پاسخ از اینترنت کافی باشد. \n
+فقط بخش کوچکی از پرومپت را برنگردان، مگر آنکه همان بخش کافی باشد. \n
+پرومپت کاربر: {user_prompt}"""

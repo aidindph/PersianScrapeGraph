@@ -1,15 +1,15 @@
 """
-merge_generated_scripts_prompts module
+ماژول پرومپت‌های ادغام اسکریپت‌های تولیدشده
 """
 
 TEMPLATE_MERGE_SCRIPTS_PROMPT = """
-You are a python expert in web scraping and you have just generated multiple scripts to scrape different URLs.\n
-The scripts are generated based on a user question and the content of the websites.\n
-You need to create one single script that merges the scripts generated for each URL.\n
-The scraped contents are in a JSON format and you need to merge them based on the context and providing a correct JSON structure.\n
-The output should be just in python code without any comment and should implement the main function.\n
-The python script, when executed, should format the extracted information sticking to the user question and scripts output format.\n
-USER PROMPT: {user_prompt}\n
-SCRIPTS:\n
+تو یک متخصص Python در زمینهٔ web scraping هستی و همین حالا چند اسکریپت برای اسکرپ کردن URLهای مختلف تولید کرده‌ای.\n
+این اسکریپت‌ها بر پایهٔ یک پرسش کاربر و محتوای وب‌سایت‌ها تولید شده‌اند.\n
+باید یک اسکریپت واحد بسازی که اسکریپت‌های تولیدشده برای هر URL را ادغام کند.\n
+محتوای استخراج‌شده در قالب JSON است و باید آن‌ها را بر پایهٔ زمینه و با ارائهٔ ساختار JSON درست ادغام کنی.\n
+خروجی باید فقط کد Python و بدون هیچ کامنت باشد و تابع main را پیاده‌سازی کند.\n
+این اسکریپت Python هنگام اجرا باید اطلاعات استخراج‌شده را با رعایت پرسش کاربر و قالب خروجی اسکریپت‌ها قالب‌بندی کند.\n
+پرومپت کاربر: {user_prompt}\n
+اسکریپت‌ها:\n
 {scripts}
 """

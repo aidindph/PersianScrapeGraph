@@ -1,70 +1,70 @@
 """
-HTML analysis prompts helper
+پرومپت‌های کمکی تحلیل HTML
 """
 
 TEMPLATE_HTML_ANALYSIS = """
-Task: Your job is to analyze the provided HTML code in relation to the initial scraping task analysis and provide all the necessary HTML information useful for implementing a function that extracts data from the given HTML string.
+وظیفه: کاری که باید انجام دهی این است که کد HTML ارائه‌شده را در ارتباط با تحلیل اولیهٔ وظیفهٔ اسکرپ تحلیل کنی و همهٔ اطلاعات HTML لازم برای پیاده‌سازی تابعی که داده‌ها را از رشتهٔ HTML داده‌شده استخراج می‌کند، ارائه کنی.
 
-**Initial Analysis**:
+**تحلیل اولیه**:
 {initial_analysis}
 
-**HTML Code**:
+**کد HTML**:
 ```html
 {html_code}
 ```
 
-**HTML Analysis Instructions**:
-1. Examine the HTML code and identify elements, classes, or IDs that correspond to each required data field mentioned in the Initial Analysis.
-2. Look for patterns or repeated structures that could indicate multiple items (e.g., product listings).
-3. Note any nested structures or relationships between elements that are relevant to the data extraction task.
-4. Discuss any additional considerations based on the specific HTML layout that are crucial for accurate data extraction.
-5. Recommend the specific strategy to use for scraping the content, remeber.
+**دستورالعمل‌های تحلیل HTML**:
+1. کد HTML را بررسی کن و عناصر، classها یا IDهایی را که با هر فیلد دادهٔ لازمِ ذکرشده در تحلیل اولیه متناظرند مشخص کن.
+2. به دنبال الگوها یا ساختارهای تکرارشونده بگرد که می‌توانند نشان‌دهندهٔ چند آیتم باشند (مثلاً فهرست محصولات).
+3. ساختارهای تودرتو یا روابط میان عناصر که برای وظیفهٔ استخراج داده مرتبط‌اند را یادداشت کن.
+4. هر نکتهٔ تکمیلی مبتنی بر چیدمان خاص HTML که برای استخراج دقیق داده حیاتی است را بحث کن.
+5. استراتژی مشخصِ مورد استفاده برای اسکرپ کردن محتوا را پیشنهاد کن و آن را به خاطر بسپار.
 
-**Important Notes**:
-- The function that the code generator is gonig to implement will receive the HTML as a string parameter, not as a live webpage.
-- No web scraping, automation, or handling of dynamic content is required.
-- The analysis should focus solely on extracting data from the static HTML provided.
-- Be precise and specific in your analysis, as the code generator will, possibly, not have access to the full HTML context.
+**نکات مهم**:
+- تابعی که مولد کد قرار است پیاده‌سازی کند، HTML را به‌صورت یک پارامتر رشته‌ای دریافت می‌کند، نه به‌صورت یک صفحهٔ وب زنده.
+- هیچ web scraping، خودکارسازی یا مدیریت محتوای پویا لازم نیست.
+- تحلیل باید صرفاً بر استخراج داده از HTML ایستای ارائه‌شده متمرکز باشد.
+- در تحلیلت دقیق و مشخص باش، چون مولد کد احتمالاً به زمینهٔ کامل HTML دسترسی ندارد.
 
-This HTML analysis will be used to guide the final code generation process for a function that extracts data from the given HTML string.
-Please provide only the analysis with relevant, specific information based on this HTML code. Avoid vague statements and focus on exact details needed for accurate data extraction.
+این تحلیل HTML برای هدایت فرایند نهایی تولید کدِ تابعی که داده‌ها را از رشتهٔ HTML داده‌شده استخراج می‌کند استفاده خواهد شد.
+لطفاً فقط تحلیل را با اطلاعات مرتبط و مشخصِ مبتنی بر این کد HTML ارائه کن. از جمله‌های مبهم پرهیز کن و بر جزئیات دقیقِ لازم برای استخراج دقیق داده تمرکز کن.
 
-Focus on providing a concise, step-by-step analysis of the HTML structure and the key elements needed for data extraction. Do not include any code examples or implementation logic. Keep the response focused and avoid general statements.**
+تحلیل گام‌به‌گام و موجزِ ساختار HTML و عناصر کلیدیِ لازم برای استخراج داده را ارائه کن. هیچ مثال کد یا منطق پیاده‌سازی درج نکن. پاسخ را متمرکز نگه دار و از جمله‌های کلی پرهیز کن.**
 
-**HTML Analysis for Data Extraction**:
+**تحلیل HTML برای استخراج داده**:
 """
 
 TEMPLATE_HTML_ANALYSIS_WITH_CONTEXT = """
-Task: Your job is to analyze the provided HTML code in relation to the initial scraping task analysis and the additional context the user provided and provide all the necessary HTML information useful for implementing a function that extracts data from the given HTML string.
+وظیفه: کاری که باید انجام دهی این است که کد HTML ارائه‌شده را در ارتباط با تحلیل اولیهٔ وظیفهٔ اسکرپ و زمینهٔ اضافه‌ای که کاربر فراهم کرده تحلیل کنی و همهٔ اطلاعات HTML لازم برای پیاده‌سازی تابعی که داده‌ها را از رشتهٔ HTML داده‌شده استخراج می‌کند، ارائه کنی.
 
-**Initial Analysis**:
+**تحلیل اولیه**:
 {initial_analysis}
 
-**HTML Code**:
+**کد HTML**:
 ```html
 {html_code}
 ```
 
-**Additional Context**:
+**زمینهٔ اضافی**:
 {additional_context}
 
-**HTML Analysis Instructions**:
-1. Examine the HTML code and identify elements, classes, or IDs that correspond to each required data field mentioned in the Initial Analysis.
-2. Look for patterns or repeated structures that could indicate multiple items (e.g., product listings).
-3. Note any nested structures or relationships between elements that are relevant to the data extraction task.
-4. Discuss any additional considerations based on the specific HTML layout that are crucial for accurate data extraction.
-5. Recommend the specific strategy to use for scraping the content, remeber.
+**دستورالعمل‌های تحلیل HTML**:
+1. کد HTML را بررسی کن و عناصر، classها یا IDهایی را که با هر فیلد دادهٔ لازمِ ذکرشده در تحلیل اولیه متناظرند مشخص کن.
+2. به دنبال الگوها یا ساختارهای تکرارشونده بگرد که می‌توانند نشان‌دهندهٔ چند آیتم باشند (مثلاً فهرست محصولات).
+3. ساختارهای تودرتو یا روابط میان عناصر که برای وظیفهٔ استخراج داده مرتبط‌اند را یادداشت کن.
+4. هر نکتهٔ تکمیلی مبتنی بر چیدمان خاص HTML که برای استخراج دقیق داده حیاتی است را بحث کن.
+5. استراتژی مشخصِ مورد استفاده برای اسکرپ کردن محتوا را پیشنهاد کن و آن را به خاطر بسپار.
 
-**Important Notes**:
-- The function that the code generator is gonig to implement will receive the HTML as a string parameter, not as a live webpage.
-- No web scraping, automation, or handling of dynamic content is required.
-- The analysis should focus solely on extracting data from the static HTML provided.
-- Be precise and specific in your analysis, as the code generator will, possibly, not have access to the full HTML context.
+**نکات مهم**:
+- تابعی که مولد کد قرار است پیاده‌سازی کند، HTML را به‌صورت یک پارامتر رشته‌ای دریافت می‌کند، نه به‌صورت یک صفحهٔ وب زنده.
+- هیچ web scraping، خودکارسازی یا مدیریت محتوای پویا لازم نیست.
+- تحلیل باید صرفاً بر استخراج داده از HTML ایستای ارائه‌شده متمرکز باشد.
+- در تحلیلت دقیق و مشخص باش، چون مولد کد احتمالاً به زمینهٔ کامل HTML دسترسی ندارد.
 
-This HTML analysis will be used to guide the final code generation process for a function that extracts data from the given HTML string.
-Please provide only the analysis with relevant, specific information based on this HTML code. Avoid vague statements and focus on exact details needed for accurate data extraction.
+این تحلیل HTML برای هدایت فرایند نهایی تولید کدِ تابعی که داده‌ها را از رشتهٔ HTML داده‌شده استخراج می‌کند استفاده خواهد شد.
+لطفاً فقط تحلیل را با اطلاعات مرتبط و مشخصِ مبتنی بر این کد HTML ارائه کن. از جمله‌های مبهم پرهیز کن و بر جزئیات دقیقِ لازم برای استخراج دقیق داده تمرکز کن.
 
-Focus on providing a concise, step-by-step analysis of the HTML structure and the key elements needed for data extraction. Do not include any code examples or implementation logic. Keep the response focused and avoid general statements.**
-In your code do not include backticks.
-**HTML Analysis for Data Extraction**:
+تحلیل گام‌به‌گام و موجزِ ساختار HTML و عناصر کلیدیِ لازم برای استخراج داده را ارائه کن. هیچ مثال کد یا منطق پیاده‌سازی درج نکن. پاسخ را متمرکز نگه دار و از جمله‌های کلی پرهیز کن.**
+در کدت هیچ backtick قرار نده.
+**تحلیل HTML برای استخراج داده**:
 """

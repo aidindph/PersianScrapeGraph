@@ -1,10 +1,10 @@
 """
-This module contains prompts for description nodes in the ScrapeGraphAI application.
+این ماژول پرومپت‌های nodeهای توصیف را در کاربرد ScrapeGraphAI جمع‌آوری می‌کند.
 """
 
 DESCRIPTION_NODE_PROMPT = """
-You are a  scraper and you have just scraped the
-following content from a website. \n
-Please provide a description summary of maximum of 20 words. \n
-CONTENT OF THE WEBSITE: {content}
+تو یک اسکرپر هستی و همین حالا محتوای زیر را
+از یک وب‌سایت استخراج کرده‌ای. \n
+لطفاً یک توصیف موجز با حداکثر ۲۰ کلمه ارائه کن. \n
+محتوای وب‌سایت: {content}
 """

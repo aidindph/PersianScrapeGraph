@@ -1,21 +1,21 @@
 """
-Search link node prompts helper
+پرومپت‌های کمکی node جست‌وجوی لینک
 """
 
 TEMPLATE_RELEVANT_LINKS = """
-You are a website scraper and you have just scraped the following content from a website.
-Content: {content}
+تو یک اسکرپر وب‌سایت هستی و همین حالا محتوای زیر را از یک وب‌سایت استخراج کرده‌ای.
+محتوا: {content}
 
-Assume relevance broadly, including any links that might be related or potentially useful
-in relation to the task.
+مربوط بودن را با دیدی باز در نظر بگیر و هر لینکی را شامل کن که ممکن است
+به وظیفه مربوط باشد یا بالقوه مفید باشد.
 
-Sort it in order of importance, the first one should be the most important one, the last one
-the least important
+لینک‌ها را به ترتیب اهمیت مرتب کن؛ اولی باید مهم‌ترین و آخری
+کم‌اهمیت‌ترین باشد.
 
-Please list only valid URLs and make sure to err on the side of inclusion if it's uncertain
-whether the content at the link is directly relevant.
+فقط URLهای معتبر را فهرست کن و اگر مطمئن نیستی که محتوای لینک مستقیماً مربوط است،
+به‌جای حذف، آن را شامل کن.
 
-Output only a list of relevant links in the format:
+فقط یک فهرست از لینک‌های مربوط را در این قالب خروجی بده:
 [
     "link1",
     "link2",
